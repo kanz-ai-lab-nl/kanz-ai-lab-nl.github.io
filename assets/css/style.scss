@@ -1,0 +1,153 @@
+---
+---
+@import "jekyll-theme-primer";
+
+:root {
+  --kanz-ink: #17212b;
+  --kanz-muted: #52606d;
+  --kanz-teal: #0f766e;
+  --kanz-teal-soft: #dff7f3;
+  --kanz-blue: #1d4ed8;
+  --kanz-sand: #f7f7f3;
+  --kanz-line: #d9e2e8;
+  --kanz-white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--kanz-ink);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(15,118,110,.10), transparent 32rem),
+    linear-gradient(180deg, #f8fbfa 0, var(--kanz-sand) 22rem, var(--kanz-sand) 100%);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.7;
+}
+
+.markdown-body {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: clamp(1.25rem, 4vw, 4rem);
+  background: var(--kanz-white);
+  border: 1px solid rgba(15,118,110,.15);
+  border-radius: 24px;
+  box-shadow: 0 22px 60px rgba(23,33,43,.10);
+  color: var(--kanz-ink);
+  font-family: inherit;
+  font-size: 17px;
+}
+
+.markdown-body > h1:first-of-type {
+  margin: .25rem 0 1.25rem;
+  padding: 0;
+  border: 0;
+  color: var(--kanz-ink);
+  font-size: clamp(2.25rem, 7vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+}
+
+.markdown-body > h1:first-of-type::before {
+  content: "KANZ AI LAB  •  PRAKTISCHE GIDS";
+  display: block;
+  width: fit-content;
+  margin-bottom: 1.35rem;
+  padding: .45rem .7rem;
+  border-radius: 999px;
+  color: #075e58;
+  background: var(--kanz-teal-soft);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.markdown-body > p:first-of-type {
+  margin: 0 0 2rem;
+  padding: 1.1rem 1.25rem;
+  border-left: 4px solid var(--kanz-teal);
+  border-radius: 0 12px 12px 0;
+  background: #f1faf8;
+  color: var(--kanz-muted);
+}
+
+.markdown-body h2 {
+  margin-top: 3.25rem;
+  padding-bottom: .55rem;
+  border-bottom: 2px solid var(--kanz-teal-soft);
+  color: var(--kanz-ink);
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  letter-spacing: -.025em;
+}
+
+.markdown-body h3 {
+  margin-top: 2.25rem;
+  color: var(--kanz-teal);
+  font-size: 1.25rem;
+}
+
+.markdown-body a { color: var(--kanz-blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.markdown-body a:hover { color: var(--kanz-teal); }
+.markdown-body strong { color: #0f312e; }
+.markdown-body hr { height: 1px; margin: 3rem 0; background: var(--kanz-line); }
+
+.markdown-body blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--kanz-teal);
+  border-radius: 0 12px 12px 0;
+  color: #31424f;
+  background: #f4fbfa;
+}
+
+.markdown-body pre {
+  padding: 1.25rem;
+  border: 1px solid #263747;
+  border-radius: 14px;
+  background: #14212c;
+  color: #e8f5f2;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.markdown-body code { border-radius: 5px; background: #edf3f5; color: #163b38; }
+.markdown-body pre code { background: transparent; color: inherit; }
+
+.markdown-body table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--kanz-line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.markdown-body th { background: #eef8f6; color: #164e49; }
+.markdown-body tr:nth-child(even) td { background: #fafcfb; }
+
+.markdown-body input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-right: .5rem;
+  accent-color: var(--kanz-teal);
+}
+
+@media (max-width: 700px) {
+  body { background: var(--kanz-white); }
+  .markdown-body {
+    margin: 0;
+    padding: 1.25rem 1rem 3rem;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 16px;
+  }
+  .markdown-body > h1:first-of-type { font-size: 2.45rem; }
+  .markdown-body > h1:first-of-type::before { font-size: .62rem; }
+  .markdown-body h2 { margin-top: 2.5rem; }
+  .markdown-body table { display: block; overflow-x: auto; }
+  .markdown-body pre { padding: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
