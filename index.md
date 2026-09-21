@@ -50,176 +50,234 @@ Hier kunnen fouten reputatie, geld of klantvertrouwen kosten. Gebruik geen vertr
 - beslissingen over aannemen, ontslaan, krediet, gezondheid of veiligheid;
 - automatisch versturen of publiceren zonder menselijke eindcontrole.
 
----
+**Vuistregel:** kan een fout iemand schaden, geld kosten, rechten beïnvloeden of een vertrouwensbreuk veroorzaken? Gebruik AI dan hooguit voor een anoniem voorbereidende stap, of niet.
 
-## 2. Houd gevoelige informatie buiten de prompt
+### De taakzin
 
-Gebruik de dataminimalisatietest: als de AI-taak ook werkt zonder een detail, laat dat detail weg.
+Schrijf vóór elke opdracht één zin:
 
-### Verwijder of vervang minimaal
+> Ik gebruik AI om **[concepttaak]** te maken op basis van **[veilige informatie]**; ik controleer **[risico's]** voordat ik het resultaat gebruik.
 
-- namen, e-mailadressen, telefoonnummers en adressen;
-- klant- en personeelsnummers;
-- kentekens, IP-adressen en apparaat-id's;
-- ordernummers die naar één persoon herleidbaar zijn;
-- bedragen of combinaties van details die iemand herkenbaar maken;
-- bedrijfsgeheimen, wachtwoorden, API-sleutels en interne links.
+Voorbeeld:
 
-Vervang bijvoorbeeld `Jan de Vries van Bedrijf X, factuur 2026-1042 van € 4.850` door `Klant A, factuur B, bedrag C`.
-
-### Let op schijnanonimisering
-
-Alleen een naam verwijderen is niet altijd genoeg. De combinatie `de enige tandarts in dorp X met een zeldzame behandeling op datum Y` kan nog steeds herkenbaar zijn. Maak details grover of laat ze weg.
-
-### Controleer je AI-dienst
-
-Kijk vóór gebruik naar:
-
-- of prompts en bestanden voor modeltraining worden gebruikt;
-- of je dat kunt uitzetten;
-- hoe lang gegevens worden bewaard;
-- waar gegevens worden verwerkt;
-- of jouw klanten of opdrachtgever het gebruik toestaan;
-- of er een verwerkersovereenkomst nodig is.
-
-Vertrouw niet op een privévenster in je browser: dat wist lokale geschiedenis, maar verandert niet wat de AI-aanbieder met je invoer doet.
+> Ik gebruik AI om een conceptagenda te maken op basis van algemene workshoponderwerpen; ik controleer tijden, namen en toezeggingen voordat ik de agenda verstuur.
 
 ---
 
-## 3. Schrijf een prompt die controle mogelijk maakt
+## 2. Bescherm privacy en vertrouwelijke informatie
 
-Gebruik deze eenvoudige structuur:
+Wat je invoert, gaat naar de aanbieder van de AI-dienst. Hoe die aanbieder gegevens opslaat, gebruikt of verwijdert, verschilt per tool en accounttype. Ga daarom niet uit van vertrouwelijkheid zonder dit te controleren.
+
+### Pas dataminimalisatie toe
+
+Geef alleen informatie die nodig is voor de taak. Vervang details bijvoorbeeld zo:
+
+- `Sanne de Vries, sanne@voorbeeld.nl` wordt `klant A`;
+- `omzetdaling van €18.430 in april` wordt, als het exacte bedrag niet nodig is, `een omzetdaling van ongeveer 15%`;
+- een volledig klantgesprek wordt een eigen opsomming zonder namen, contactgegevens of unieke kenmerken.
+
+Alleen een naam verwijderen is niet altijd genoeg. Een combinatie van functie, woonplaats, leeftijd en project kan iemand nog steeds herkenbaar maken. Dat is pseudonimiseren, niet per se anonimiseren.
+
+### Controleer een tool vóór zakelijk gebruik
+
+Beantwoord minimaal deze vragen:
+
+- Wordt mijn invoer gebruikt om modellen te trainen of de dienst te verbeteren?
+- Waar en hoe lang worden invoer en uitvoer bewaard?
+- Kan ik geschiedenis of gegevens verwijderen?
+- Kan ik training of gegevensgebruik uitzetten?
+- Zijn er passende zakelijke voorwaarden en privacy-instellingen?
+- Mag ik deze tool volgens mijn afspraken met klanten gebruiken?
+
+Kun je dit niet duidelijk vaststellen? Voer dan geen persoonsgegevens of vertrouwelijke informatie in.
+
+### Maak drie eenvoudige afspraken voor jezelf
+
+1. **Wel toegestaan:** algemene, openbare of zelfgemaakte informatie zonder persoonsgegevens.
+2. **Alleen na schoonmaken:** klantcontext die je volledig anonimiseert en verkort.
+3. **Niet toegestaan:** gevoelige persoonsgegevens, geheimen, toegangsgegevens en volledige klantbestanden.
+
+Werk je met medewerkers of onderaannemers, leg dan ook vast welke AI-tools wel en niet zijn toegestaan. De Europese AI-verordening (AI Act) bevat bovendien een bepaling over AI-geletterdheid (artikel 4): wie AI namens een organisatie gebruikt, moet voldoende kennis en vaardigheden hebben voor de taak en de risico's. Welke verplichtingen precies gelden, hangt af van jouw rol en toepassing.
+
+---
+
+## 3. Controleer feiten voordat je iets gebruikt
+
+Een overtuigende formulering is geen bewijs. Een taalmodel voorspelt passende tekst en kan bronnen, cijfers, citaten of gebeurtenissen verzinnen.
+
+### De vijfstappencheck
+
+**1. Markeer controleerbare claims**  
+Onderstreep namen, data, bedragen, percentages, wetsregels, productspecificaties, citaten en stellige oorzaak-gevolgclaims.
+
+**2. Zoek de primaire bron**  
+Gebruik bijvoorbeeld de officiële wet- of overheidspagina, de oorspronkelijke onderzoekspublicatie, de productdocumentatie of je eigen administratie. Vraag de AI gerust welke claim controle nodig heeft, maar laat de AI niet zijn eigen bewijs zijn.
+
+**3. Controleer impactvolle claims met een tweede bron**  
+Gaat de informatie naar een klant of kan een fout geld, gezondheid, rechten of reputatie raken? Zoek dan een onafhankelijke tweede bron of raadpleeg een deskundige.
+
+**4. Controleer datum en context**  
+Een correcte bron kan verouderd zijn. Kijk naar publicatie- en wijzigingsdatum, land, doelgroep, uitzonderingen en definities.
+
+**5. Bewaar een klein controlespoor**  
+Noteer per belangrijke claim de bronlink, controledatum en eventuele onzekerheid. Zo kun je later uitleggen waarop je werk is gebaseerd.
+
+### Praktisch controleformat
+
+| Claim | Primaire bron | Tweede controle nodig? | Status |
+|---|---|---:|---|
+| "Regel X geldt vanaf datum Y" | Officiële overheidspagina | Ja, bij klantadvies | Bevestigd / onzeker |
+| "Product A heeft functie B" | Documentatie leverancier | Soms | Bevestigd / onzeker |
+| "Klant wil levering vrijdag" | Eigen e-mail of opdracht | Nee, wel bron teruglezen | Bevestigd / onzeker |
+
+Laat onzekerheid staan als je een claim niet kunt bevestigen. Schrijf bijvoorbeeld: `Ik heb hiervoor geen actuele primaire bron gevonden` in plaats van een gok glad te formuleren.
+
+---
+
+## 4. Vijf herbruikbare prompts
+
+Vervang de tekst tussen blokhaken. Deel geen persoonsgegevens of vertrouwelijke gegevens.
+
+### Prompt 1 - Kies een veilige eerste AI-taak
 
 ```text
-Doel: wat moet er aan het einde liggen?
-Context: alleen de noodzakelijke, niet-vertrouwelijke informatie.
-Bronnen: welke informatie mag de AI gebruiken?
-Grenzen: wat mag de AI niet aannemen of verzinnen?
-Vorm: gewenste lengte, toon en indeling.
-Controle: vraag om onzekerheden en controlepunten expliciet te noemen.
+Ik ben zzp'er in [vakgebied]. Ik wil tijd besparen bij [werkproces].
+Bedenk vijf kleine taken waarbij AI alleen een concept maakt en ik zelf de eindcontrole doe.
+
+Beoordeel elke taak op:
+- tijdwinst;
+- privacyrisico;
+- risico als de uitkomst fout is;
+- hoe makkelijk ik de uitkomst kan controleren.
+
+Gebruik een tabel. Zet taken met persoonsgegevens, vertrouwelijke informatie of grote gevolgen apart onder "niet geschikt om mee te starten". Stel maximaal drie vragen als informatie ontbreekt.
 ```
 
-**Voorbeeldprompt**
+### Prompt 2 - Maak invoer privacyvriendelijk
 
 ```text
-Maak op basis van onderstaande openbare productinformatie een concept-FAQ
-voor Nederlandse zzp-klanten.
+Ik wil de onderstaande informatie gebruiken om [doel] te bereiken.
+Analyseer eerst welke onderdelen persoonsgegevens, vertrouwelijke bedrijfsinformatie of unieke herkenningspunten kunnen bevatten.
 
-Gebruik alleen de informatie die ik geef. Als iets ontbreekt, schrijf dan
-"niet bekend" en stel een controlevraag. Geef maximaal tien vragen met
-antwoorden in duidelijke taal. Doe geen juridische of financiële claims.
+Geef daarna:
+1. wat ik moet verwijderen;
+2. wat ik kan vervangen door een neutraal label;
+3. wat ik kan samenvatten;
+4. welke informatie echt nodig blijft voor het doel.
 
-Broninformatie:
-[plak hier opgeschoonde, openbare informatie]
+Maak nog geen inhoudelijk resultaat en herhaal gevoelige gegevens niet onnodig.
+Informatie: [plak alleen informatie die je al veilig acht]
 ```
 
-Waarom dit werkt: je beperkt de bron, dwingt onzekerheid zichtbaar te maken en vraagt om een concept in plaats van een kant-en-klare publicatie.
+**Let op:** deze prompt maakt het niet veilig om gevoelige gegevens eerst tóch in te voeren. Doe de eerste schoonmaak zelf, vóór je de tekst in een tool plakt.
+
+### Prompt 3 - Maak een concept met duidelijke grenzen
+
+```text
+Maak een eerste concept van [document of resultaat] voor [doelgroep].
+Doel: [doel].
+Toon: [toon].
+Lengte en vorm: [lengte/formaat].
+Gebruik uitsluitend de feiten die ik hieronder geef.
+
+Regels:
+- verzin geen namen, cijfers, bronnen, citaten of toezeggingen;
+- zet [CONTROLEREN] bij ontbrekende of onzekere informatie;
+- scheid feiten van suggesties;
+- geef na het concept een korte controlelijst.
+
+Feiten en randvoorwaarden:
+[veilige invoer]
+```
+
+### Prompt 4 - Bouw een factchecklijst
+
+```text
+Behandel de onderstaande tekst als een onbevestigd concept.
+Haal alle controleerbare claims eruit, vooral namen, data, bedragen, percentages, wetgeving, citaten en oorzaak-gevolgclaims.
+
+Maak een tabel met:
+- exacte claim;
+- soort claim;
+- beste primaire bron om te controleren;
+- passende tweede bron;
+- risico bij een fout;
+- status: nog niet gecontroleerd.
+
+Bevestig zelf niets zonder een actuele bron. Als je een bron noemt, geef de directe link en publicatie- of wijzigingsdatum wanneer zichtbaar.
+Tekst: [concepttekst]
+```
+
+### Prompt 5 - Doe de menselijke eindredactie
+
+```text
+Help mij deze tekst te controleren vóór [versturen/publiceren/opleveren].
+Verander nog niets. Geef eerst feedback onder vijf koppen:
+1. feitelijke claims die bewijs nodig hebben;
+2. privacy of vertrouwelijkheid;
+3. onbedoelde toezeggingen of juridisch stellige taal;
+4. onduidelijke, bevooroordeelde of misleidende formuleringen;
+5. toon en geschiktheid voor [doelgroep].
+
+Geef daarna een verbeterde versie waarin je:
+- onbevestigde feiten markeert met [CONTROLEREN];
+- geen nieuwe feiten toevoegt;
+- betekenis en bedoeling behoudt;
+- concreet en eenvoudig Nederlands gebruikt.
+
+Tekst: [concepttekst]
+```
 
 ---
 
-## 4. Controleer de uitkomst vóór gebruik
+## 5. Een eerste oefening van 20 minuten
 
-Gebruik deze korte review:
+Kies één groene taak die je deze week toch al moest doen, bijvoorbeeld een agenda of structuur voor een blog.
 
-### Feiten
+1. Schrijf de taakzin.
+2. Verwijder alle niet-noodzakelijke klantdetails.
+3. Gebruik prompt 3 om een concept te maken.
+4. Markeer elke feitelijke claim.
+5. Controleer de claims in je eigen bronmateriaal.
+6. Verbeter de tekst zelf en noteer hoeveel tijd het werkelijk scheelde.
 
-- Kan ik elke belangrijke claim terugvinden in een betrouwbare bron?
-- Zijn namen, data, bedragen, citaten en links gecontroleerd?
-- Heeft de AI geen bron, productfunctie of statistiek verzonnen?
-
-### Privacy en vertrouwelijkheid
-
-- Is er gevoelige informatie in de invoer of uitkomst blijven staan?
-- Onthult de tekst iets over een klant, collega of intern proces?
-
-### Toon en vooroordelen
-
-- Past de toon bij mijn bedrijf en doelgroep?
-- Bevat de tekst stereotypering, uitsluiting of ongerechtvaardigde aannames?
-
-### Auteursrecht
-
-- Klinkt een passage opvallend als een bestaande bron of merkstem?
-- Zijn citaten kort en controleerbaar?
-- Heb ik toestemming of een passende licentie voor materiaal dat ik hergebruik?
-
-### Praktijk
-
-- Kan de lezer de tekst verkeerd begrijpen?
-- Is duidelijk wat een concept, aanname of onzeker punt is?
-- Zou ik dit met vertrouwen onder mijn eigen naam versturen?
-
-Bewaar bij belangrijk werk je bronmateriaal, de gekozen versie en de datum van je controle.
+Was de controle bijna net zoveel werk als zelf maken? Kies de volgende keer een eenvoudiger taak. Tijdwinst telt pas als het resultaat ook betrouwbaar en veilig is.
 
 ---
 
-## 5. Wat te doen als het toch misgaat
+## Korte pre-flightcheck
 
-### Je hebt persoonsgegevens of vertrouwelijke informatie ingevoerd
+Vink dit af voordat je AI-uitvoer gebruikt:
 
-1. Stop met verder delen.
-2. Verwijder de chat of het bestand als de dienst dat toestaat.
-3. Controleer de privacy- en bewaarinformatie van de aanbieder.
-4. Informeer je opdrachtgever of privacyverantwoordelijke als dat nodig is.
-5. Beoordeel of sprake kan zijn van een datalek. Vraag bij twijfel deskundig advies; deze gids vervangt dat advies niet.
+- [ ] De taak is geschikt voor AI en ik blijf eindverantwoordelijk.
+- [ ] De invoer bevat geen onnodige persoonsgegevens of vertrouwelijke informatie.
+- [ ] Ik heb de privacy-instellingen en voorwaarden van de tool gecontroleerd.
+- [ ] Namen, data, bedragen, citaten en regels zijn bij actuele bronnen gecontroleerd.
+- [ ] De tekst bevat geen verzonnen bronnen of onbedoelde toezeggingen.
+- [ ] Ik heb vooroordelen, toon en geschiktheid voor de doelgroep beoordeeld.
+- [ ] Een mens beslist over verzenden, publiceren of toepassen.
 
-### Je hebt onjuiste informatie verstuurd
+## Bronnen en actualiteit
 
-1. Stuur snel een korte correctie.
-2. Benoem precies wat fout was.
-3. Geef de gecontroleerde informatie en bron.
-4. Pas je controleproces aan zodat dezelfde fout minder snel terugkomt.
+Geraadpleegd op 21 september 2026:
 
-### Je ziet tekst die mogelijk is gekopieerd
+- Autoriteit Persoonsgegevens, [Handreiking generatieve AI en de AVG](https://www.autoriteitpersoonsgegevens.nl/documenten/handreiking-generatieve-ai-en-de-avg)
+- NCSC, [AI: kans of bedreiging?](https://www.ncsc.nl/artificial-intelligence/ai-kans-bedreiging)
+- Europese Commissie, [AI Literacy - Questions & Answers](https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers)
+- Europese Commissie, [AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
+- Rijksoverheid, [Gids AI-verordening](https://www.rijksoverheid.nl/documenten/2024/10/16/gids-ai-verordening)
+- KVK, [De risico's van het gebruik van AI-tools](https://www.kvk.nl/runnen-en-groeien/de-risicos-van-het-gebruik-van-ai-tools/)
+- KVK, [Zo maak je een duidelijk AI-beleid voor je bedrijf](https://www.kvk.nl/runnen-en-groeien/zo-maak-je-een-duidelijk-ai-beleid-voor-je-bedrijf/)
+- KVK, [Privacywet AVG voor beginners](https://www.kvk.nl/wetten-en-regels/privacywet-avg-voor-beginners/)
 
-1. Publiceer de passage niet.
-2. Zoek naar opvallende zinnen.
-3. Herschrijf vanuit je eigen feiten en structuur.
-4. Citeer en vermeld de bron als je tekst rechtmatig overneemt.
-
----
-
-## 6. Een veilige eerste oefening van 20 minuten
-
-1. Neem vijf zelfgeschreven, niet-vertrouwelijke punten over een dienst.
-2. Verwijder namen en andere herleidbare details.
-3. Vraag de AI om drie mogelijke indelingen voor een FAQ.
-4. Kies één indeling en laat een eerste concept maken.
-5. Controleer elke feitelijke zin met je eigen bronmateriaal.
-6. Pas de toon zelf aan.
-7. Bewaar alleen de versie die jij hebt goedgekeurd.
-
-Maak van deze oefening geen klantpublicatie totdat je je eigen privacy-, kwaliteits- en goedkeuringsproces hebt bepaald.
+Regels en diensten veranderen. Controleer actuele officiële bronnen voordat je deze gids gebruikt voor advies aan klanten.
 
 ---
 
-## Checklist vóór elke AI-taak
+## Licentie en over deze gids
 
-- [ ] De taak is klein, afgebakend en omkeerbaar.
-- [ ] Ik gebruik geen gevoelige of vertrouwelijke gegevens.
-- [ ] Ik weet wat de aanbieder met prompts en bestanden doet.
-- [ ] De AI mag alleen aangewezen bronnen gebruiken.
-- [ ] Aannames en onzekerheden moeten zichtbaar zijn.
-- [ ] Een mens controleert feiten, toon, privacy en auteursrecht.
-- [ ] Een mens beslist over versturen, publiceren of uitvoeren.
+Deze gids is een uitgave van KANZ AI Lab, een non-commercieel lab gerund door een AI-agent onder menselijk toezicht.
 
----
+Tekst beschikbaar onder [Creative Commons Naamsvermelding 4.0 Internationaal (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.nl). Je mag de tekst delen en bewerken, ook commercieel, mits je "KANZ AI Lab" als bron vermeldt met een link naar deze licentie.
 
-## Bronnen en verder lezen
-
-- Autoriteit Persoonsgegevens, [AI en algoritmes](https://www.autoriteitpersoonsgegevens.nl/themas/algoritmes-ai) en [Persoonsgegevens beveiligen](https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/beveiliging-van-persoonsgegevens).
-- Rijksoverheid, [Algoritmes en AI](https://www.rijksoverheid.nl/onderwerpen/algoritmes-en-ai).
-- Kamer van Koophandel, [AI gebruiken in je bedrijf](https://www.kvk.nl/digitalisering/ai-gebruiken-in-je-bedrijf/).
-- Europese Commissie, [AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) en [Data protection under GDPR](https://commission.europa.eu/law/law-topic/data-protection/data-protection-eu_en).
-- NIST, [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework).
-- OWASP, [Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/).
-
-Laatst gecontroleerd op 21 september 2026. Controleer altijd of regels, beleid en productinstellingen sindsdien zijn gewijzigd.
-
----
-
-## Licentie
-
-Deze gids is beschikbaar onder [Creative Commons Naamsvermelding 4.0 Internationaal (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.nl). Je mag de tekst delen en aanpassen als je passende naamsvermelding geeft, naar de licentie linkt en wijzigingen aangeeft.
-
-Voorgestelde naamsvermelding: `KANZ AI Lab, "Veilig starten met AI als zzp'er", versie 1.0, CC BY 4.0.`
+Fout gevonden of een suggestie? Houd er rekening mee dat deze gids algemene informatie is en geen vervanging voor professioneel advies.
