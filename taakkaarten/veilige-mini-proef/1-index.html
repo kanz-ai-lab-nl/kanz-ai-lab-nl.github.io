@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Van één terugkerende taak naar een veilige mini-proef | KANZ Taakkaart 01</title>
+<meta name="description" content="KANZ Taakkaart 01: kies één terugkerende taak en maak een veilige mini-proef met fictieve gegevens. Met leeg werkblad, uitgewerkte casus en bronnen.">
+<link rel="canonical" href="https://kanz-ai-lab-nl.github.io/taakkaarten/veilige-mini-proef/">
+<meta property="og:title" content="Van één terugkerende taak naar een veilige mini-proef | KANZ Taakkaart 01">
+<meta property="og:description" content="KANZ Taakkaart 01: kies één terugkerende taak en maak een veilige mini-proef met fictieve gegevens. Met leeg werkblad, uitgewerkte casus en bronnen.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="KANZ AI Lab">
+<meta property="og:url" content="https://kanz-ai-lab-nl.github.io/taakkaarten/veilige-mini-proef/">
+<link rel="icon" href="/favicon.ico">
+<style>
+:root{
+  --paper:#f6f3ec;
+  --band:#eee9dc;
+  --ink:#23201a;
+  --muted:#6f685b;
+  --line:#d9d1bf;
+  --green:#2e6b4f;
+  --rust:#a8452b;
+  --rust-band:#f2e3d8;
+  --ghost:#ddd5c2;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--green)}
+
+/* masthead */
+.mast{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:20px 4vw 0;border-bottom:1px solid var(--ink)}
+.wordmark{font:700 15px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding-bottom:16px;display:inline-block}
+.wordmark span{color:var(--muted);font-weight:500;letter-spacing:.18em;margin-left:10px}
+nav{display:flex;gap:26px}
+nav a{font:600 13px/1 var(--sans);color:var(--muted);text-decoration:none;padding:6px 0 16px;border-bottom:2px solid transparent;margin-bottom:-1px}
+nav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--rust)}
+
+/* shared */
+main{max-width:1240px;margin:0 auto}
+.label{font:700 11px/1.3 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
+.label.rust{color:var(--rust)}
+.dateline{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line);padding:0 0 10px;font:600 11px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em}
+
+/* hero */
+.hero{padding:44px 4vw 64px}
+.hero .dateline{border-top:1px solid var(--ink);padding-top:10px}
+.hero h1{font-size:clamp(46px,6.4vw,88px);line-height:1.02;margin:36px 0 26px;max-width:15ch}
+.dek{font-size:clamp(18px,1.7vw,22px);line-height:1.55;color:var(--muted);max-width:56ch;margin:0}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.button{appearance:none;border:1px solid var(--ink);background:var(--ink);color:var(--paper);padding:14px 22px;font:700 13px/1.2 var(--sans);letter-spacing:.02em;text-decoration:none;cursor:pointer;min-height:48px;display:inline-flex;align-items:center}
+.button.ghost{background:transparent;color:var(--ink)}
+.button.text{background:transparent;color:var(--muted);border-color:transparent;text-decoration:underline;text-underline-offset:3px}
+
+/* contents list */
+.contains{border-top:1px solid var(--line);margin-top:54px;padding-top:8px}
+.contains ol{list-style:none;margin:0;padding:0}
+.contains li{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--line);font-size:16px}
+.contains li span{font:600 11px/1 var(--mono);color:var(--green);letter-spacing:.1em}
+
+/* safety strip */
+.safety{background:var(--rust-band);border-top:1px solid var(--rust);border-bottom:1px solid var(--rust);padding:34px 4vw;display:grid;grid-template-columns:minmax(200px,320px) 1fr;gap:8px 40px}
+.safety b{font:600 clamp(20px,2.2vw,27px)/1.25 var(--serif);color:var(--ink)}
+.safety p{margin:0;color:#5f4237;line-height:1.6;font-size:15px;max-width:70ch}
+
+/* route overview: numbered hairline list */
+.route{padding:64px 4vw}
+.route h2{font-size:clamp(30px,3.6vw,46px);line-height:1.08;margin:14px 0 8px;max-width:20ch}
+.route>p{color:var(--muted);max-width:60ch;line-height:1.6;margin:0 0 34px}
+.route ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.route li{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:baseline;padding:19px 0;border-top:1px solid var(--line);font:600 19px/1.3 var(--serif)}
+.route li span{font:300 34px/1 var(--sans);color:var(--green)}
+
+/* stop band */
+.notyet{background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 4vw}
+.notyet h2{font-size:clamp(30px,3.6vw,46px);line-height:1.08;margin:14px 0 34px;max-width:22ch}
+.notyet ol{list-style:none;margin:0;padding:0;max-width:860px}
+.notyet li{display:grid;grid-template-columns:34px 1fr;gap:16px;padding:16px 0;border-top:1px solid #cdc4ae;font-size:16px;line-height:1.55}
+.notyet li span{font:700 11px/1.9 var(--mono);color:var(--rust)}
+
+/* worksheet: manual grammar, oversized light numeral + hairline */
+.sheet{padding:64px 4vw 80px;max-width:980px}
+.sheet-head{margin-bottom:54px}
+.sheet-head h1{font-size:clamp(38px,5vw,64px);line-height:1.05;margin:14px 0 18px;max-width:16ch}
+.sheet-head p{font-size:17px;line-height:1.6;color:var(--muted);max-width:62ch;margin:0}
+.step{border-top:1px solid var(--ink);padding:26px 0 46px}
+.step-head{display:flex;align-items:baseline;gap:22px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:30px}
+.step-no{font:300 58px/0.95 var(--sans);color:var(--ink);letter-spacing:-.03em}
+.step h2{font-size:clamp(24px,2.6vw,32px);line-height:1.12;margin:0}
+.field{margin:0 0 26px}
+.field label{font:650 15px/1.4 var(--sans);display:block;margin-bottom:12px}
+.writing-lines{height:62px;background:repeating-linear-gradient(to bottom,transparent 0,transparent 30px,#c9c0ab 31px)}
+.hint{border-left:2px solid var(--green);padding:2px 0 2px 16px;margin:6px 0 0;color:var(--muted);font-size:14px;line-height:1.55;max-width:60ch}
+.page-end{border-top:1px solid var(--line);padding-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+
+/* casus */
+.synthetic{background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;margin:26px 0 10px;display:grid;grid-template-columns:minmax(180px,260px) 1fr;gap:6px 32px}
+.synthetic b{font:600 18px/1.3 var(--serif)}
+.synthetic span{color:var(--muted);line-height:1.55;font-size:14.5px}
+.answer{display:grid;grid-template-columns:200px 1fr;gap:24px;border-top:1px solid var(--line);padding:17px 0}
+.answer h3,.answer p{margin:0}
+.answer h3{font:700 11px/1.6 var(--mono);color:var(--green);text-transform:uppercase;letter-spacing:.12em}
+.answer p{font-size:16.5px;line-height:1.6}
+
+/* sources */
+.source-list{border-top:1px solid var(--ink)}
+.source-list a{display:grid;grid-template-columns:280px 1fr auto;gap:28px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.source-list b{font:600 20px/1.3 var(--serif)}
+.source-list span{color:var(--muted);line-height:1.55;font-size:15px}
+.source-list em{font:600 12px/1 var(--mono);color:var(--green);font-style:normal;white-space:nowrap}
+.source-list a:hover b{color:var(--green)}
+blockquote{margin:54px 0;border:0;border-top:3px double var(--rust);border-bottom:3px double var(--rust);padding:26px 0;font:400 clamp(19px,2vw,24px)/1.5 var(--serif)}
+blockquote b{color:var(--rust)}
+.license{border-top:1px solid var(--ink);margin-top:20px;padding:34px 0 10px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.license h2{font-size:26px;margin:0 0 12px}
+.license p{color:var(--muted);line-height:1.6;font-size:15px;margin:0 0 14px;max-width:52ch}
+
+/* footer */
+footer{border-top:1px solid var(--ink);margin-top:70px;padding:22px 4vw 34px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+footer b{color:var(--ink)}
+
+@media(max-width:900px){
+  .route ol{grid-template-columns:1fr}
+  .safety{grid-template-columns:1fr}
+  .license{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .mast{display:block}
+  .wordmark{display:block;margin-bottom:12px;padding-bottom:0}
+  nav{gap:18px;overflow-x:auto}
+  nav a{white-space:nowrap;font-size:12px}
+  .hero{padding:34px 5vw 48px}
+  .hero h1{font-size:44px}
+  .dateline{display:grid;gap:4px}
+  .route,.notyet,.sheet{padding-left:5vw;padding-right:5vw}
+  .safety{padding:30px 5vw}
+  .step-no{font-size:44px}
+  .step-head{gap:14px}
+  .answer{grid-template-columns:1fr;gap:6px}
+  .source-list a{grid-template-columns:1fr;gap:8px}
+  .actions{display:grid}
+  .button{justify-content:center}
+  .synthetic{grid-template-columns:1fr}
+}
+@media print{
+  body{background:#fff!important}
+  .mast,.actions,.page-end,footer{display:none!important}
+  main{max-width:none}
+  .safety,.notyet,.synthetic{background:#fff!important}
+  .step,.answer{break-inside:avoid}
+  .writing-lines{height:52px}
+  .button{display:none}
+}
+a.button,a.button:visited,a.button:active{color:var(--paper);text-decoration:none}
+a.button.ghost,a.button.ghost:visited{color:var(--ink)}
+a.button.text,a.button.text:visited{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+</style>
+</head>
+<body>
+<div class="mast"><a href="/taakkaarten/veilige-mini-proef/" class="wordmark">KANZ<span>AI Lab</span></a><nav aria-label="Onderdelen"><a href="/taakkaarten/veilige-mini-proef/" aria-current="page">Overzicht</a><a href="/taakkaarten/veilige-mini-proef/sjabloon/">Leeg werkblad</a><a href="/taakkaarten/veilige-mini-proef/casus/">Casus</a><a href="/taakkaarten/veilige-mini-proef/bronnen/">Bronnen</a></nav></div>
+<main>
+<header class="hero">
+  <div class="dateline"><span>KANZ AI Lab · Taakkaart 01</span><span>Versie 1.0 · 22 september 2026</span></div>
+  <h1>Van één terugkerende taak naar een veilige mini-proef</h1>
+  <p class="dek">Kies één taak. Maak een kleine proef met fictieve gegevens. Leg vóór de eerste test vast wat je controleert, wanneer je stopt en wat de volgende handmatige stap is.</p>
+  <div class="actions"><a class="button" href="/taakkaarten/veilige-mini-proef/sjabloon/">Start met het lege werkblad</a><button class="button ghost" type="button" onclick="downloadMd()">Download leeg sjabloon (.md)</button><button class="button text" type="button" onclick="printPage()">Print / bewaar als pdf</button></div>
+  <div class="contains"><p class="label" style="margin-top:22px">Deze taakkaart bevat</p><ol><li><span>01</span>Leeg, herbruikbaar sjabloon</li><li><span>02</span>Uitgewerkte casus met synthetische gegevens</li><li><span>03</span>Tool- en datastroomvragen</li><li><span>04</span>Bron- en licentiecheck</li><li><span>05</span>Menselijke controle, stopregels en herstel</li></ol></div>
+</header>
+<div class="safety"><b>Dit werkblad keurt niets goed en is geen juridisch of compliance-advies.</b><p>Gebruik geen echte persoonsgegevens, klantinformatie of vertrouwelijke bedrijfsgegevens. Laat een tool niets automatisch extern doen: niets publiceren, verzenden, bestellen of aanpassen.</p></div>
+<section class="route">
+  <p class="label">De route</p>
+  <h2>Acht korte checks. Eén veilige volgende stap.</h2>
+  <p>Werk klein en nakijkbaar. “Weet ik niet” is een bruikbaar antwoord: eerst uitzoeken, dan pas testen.</p>
+  <ol><li><span>01</span>Kies één terugkerende taak</li><li><span>02</span>Baken de mini-proef af</li><li><span>03</span>Maak veilige oefeninvoer</li><li><span>04</span>Schrijf tool en datastroom op</li><li><span>05</span>Controleer bron en licentie</li><li><span>06</span>Leg menselijke controle vast</li><li><span>07</span>Bepaal stop en herstel</li><li><span>08</span>Kies één volgende handmatige stap</li></ol>
+</section>
+<section class="notyet">
+  <p class="label rust">Eerst stoppen</p>
+  <h2>Wanneer je nog niet moet testen</h2>
+  <ol><li><span>1</span>De tool, leverancier of datastroom is onbekend.</li><li><span>2</span>Je hebt echte persoonsgegevens, klantinformatie of vertrouwelijke bedrijfsgegevens nodig.</li><li><span>3</span>De bron, maker, licentie of toestemming is onbekend.</li><li><span>4</span>De proef kan zonder menselijke controle iets externs verzenden, publiceren, bestellen of wijzigen.</li><li><span>5</span>Een fout kan mensen raken en je hebt geen duidelijke stop- en herstelstap.</li></ol>
+</section>
+</main>
+<script>
+var steps=[['01','Kies één terugkerende taak',['Welke ene taak wil je onderzoeken?','Waarom is deze taak het proberen waard?']],['02','Baken de mini-proef af',['Wat is precies één uitvoer?','Wat valt buiten deze proef?']],['03','Maak veilige oefeninvoer',['Welke volledig fictieve of synthetische invoer gebruik je?','Welke echte gegevens blijven buiten beeld?']],['04','Schrijf tool en datastroom op',['Welke tool of leverancier wil je gebruiken?','Waar gaan de gegevens heen en wat wordt bewaard?','Wat weet je nog niet?']],['05','Controleer bron en licentie',['Welke bron gebruik je? Wie is maker of eigenaar?','Welke licentie of toestemming geldt voor dit doel?']],['06','Leg menselijke controle vast',['Wie controleert de uitvoer vóór verder gebruik?','Waarop controleert die persoon?','Wat gebeurt nooit automatisch?']],['07','Bepaal stop en herstel',['Stop direct wanneer…','Zo herstel je de proef']],['08','Kies één volgende handmatige stap',['Welke stap doe je nu, wie doet die en wanneer?']]];
+function downloadMd(){var text=['# Van één terugkerende taak naar een veilige mini-proef','','KANZ Taakkaart 01 · versie 1.0 · 22 september 2026',''];steps.forEach(function(s){text.push('## '+parseInt(s[0],10)+'. '+s[1]);s[2].forEach(function(q){text.push(q+':','')});text.push('')});var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text.join('\n')],{type:'text/markdown'}));a.download='kanz-veilige-mini-proef-sjabloon.md';document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(a.href)}
+function printPage(){window.print()}
+</script>
+<footer><b>KANZ AI Lab</b><span>Open, praktisch, onder menselijk toezicht.</span></footer>
+</body>
+</html>
