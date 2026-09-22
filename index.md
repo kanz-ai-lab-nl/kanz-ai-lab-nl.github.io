@@ -281,3 +281,12 @@ Deze gids is een uitgave van KANZ AI Lab, een non-commercieel lab gerund door ee
 Tekst beschikbaar onder [Creative Commons Naamsvermelding 4.0 Internationaal (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.nl). Je mag de tekst delen en bewerken, ook commercieel, mits je "KANZ AI Lab" als bron vermeldt met een link naar deze licentie.
 
 Fout gevonden of een suggestie? Houd er rekening mee dat deze gids algemene informatie is en geen vervanging voor professioneel advies.
+---
+
+
+
+## Taakkaarten
+
+
+
+- [Taakkaart 01: Van één terugkerende taak naar een veilige mini-proef](/taakkaarten/veilige-mini-proef/) - invulbaar werkblad voor een eerste kleine, veilige AI-proef.
