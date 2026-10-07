@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Proefdagboek - één taak, je eigen controles</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap">
+<nav><a href="index.html">Verhaal</a><a href="proefdagboek.html" aria-current="page">Proefdagboek</a></nav>
+<h1>Proefdagboek</h1>
+<div class="note noprint"><strong>Geen persoonsgegevens invullen.</strong> Geen namen, adressen of klantinformatie. Alles blijft in je eigen browser; er wordt niets verzonden.</div>
+
+<section id="s1"><h2>1. Je taak en je controles</h2>
+<label for="tname">Welke taak test je? (één taak die je vaak doet)</label>
+<input id="tname" maxlength="120" placeholder="Bijvoorbeeld: standaard antwoord op een prijsvraag">
+<fieldset><legend>Je controles: wat moet kloppen voordat je het zou gebruiken? (1 tot 5)</legend>
+<div id="checks"></div>
+<div class="btns"><button type="button" class="sec" id="addcheck">Controle toevoegen</button></div>
+<p class="small">Schrijf ze op voordat je de eerste proef doet. Achteraf je eigen maatstaf aanpassen maakt de uitkomst minder eerlijk.</p></fieldset>
+<fieldset><legend>Zelf doen: hoe lang duurt de taak zonder AI? (minuten)</legend>
+<div class="row"><div><label for="selft">Tijd van deze keer</label><input id="selft" type="number" min="0" step="0.5" inputmode="decimal"></div>
+<div><label>&nbsp;</label><button type="button" class="sec" id="addself">Zelf-meting toevoegen</button></div></div>
+<p class="small" id="selflist">Nog geen zelf-metingen.</p></fieldset>
+</section>
+
+<section id="s2"><h2>2. Een proef met AI</h2>
+<p class="small">Noteer de vier tijden in hele minuten of halve minuten. Een schatting is goed, als je maar elke keer hetzelfde doet.</p>
+<form id="tf">
+<div class="row"><div><label for="tdate">Datum</label><input id="tdate" type="date" required></div>
+<div><label for="ttool">Welke AI-tool? (alleen de naam)</label><input id="ttool" maxlength="60"></div></div>
+<div class="row3">
+<div><label for="t1">Vragen</label><input id="t1" type="number" min="0" step="0.5" inputmode="decimal" required></div>
+<div><label for="t2">Wachten</label><input id="t2" type="number" min="0" step="0.5" inputmode="decimal" required></div>
+<div><label for="t3">Nakijken</label><input id="t3" type="number" min="0" step="0.5" inputmode="decimal" required></div>
+<div><label for="t4">Herstellen</label><input id="t4" type="number" min="0" step="0.5" inputmode="decimal" required></div></div>
+<fieldset><legend>Welke controles klopten NIET?</legend><div id="failed"><span class="small">Voeg eerst controles toe.</span></div></fieldset>
+<fieldset><legend>Zou je het resultaat uiteindelijk gebruiken?</legend>
+<div class="chk"><input type="radio" name="acc" id="accy" value="ja" required><label for="accy" style="margin:0;font-family:Georgia,serif;font-weight:400;font-size:1rem">Ja, na het herstellen</label></div>
+<div class="chk"><input type="radio" name="acc" id="accn" value="nee"><label for="accn" style="margin:0;font-family:Georgia,serif;font-weight:400;font-size:1rem">Nee, ik deed het alsnog zelf</label></div></fieldset>
+<label for="tnote">Korte notitie (zonder persoonsgegevens)</label><textarea id="tnote" rows="2" maxlength="300"></textarea>
+<div class="btns"><button type="submit">Proef opslaan</button></div>
+</form></section>
+
+<section id="s3"><h2>3. Je overzicht</h2>
+<div id="out"></div>
+<div class="btns noprint"><button type="button" id="print">Print overzicht</button><button type="button" class="sec" id="exp">Bewaar als bestand</button>
+<button type="button" class="sec" id="impb">Open bestand</button><input type="file" id="imp" accept="application/json" class="hide" aria-label="Bestand kiezen">
+<button type="button" class="link" id="wipe">Alles wissen</button></div>
+<p class="small" id="msg" role="status"></p>
+</section>
+<footer class="small" style="margin-top:3rem;border-top:1px solid var(--line);padding-top:.8rem">Gemaakt door een AI-agent onder toezicht van een mens (KANZ AI Lab). Tekst CC BY 4.0, code MIT. Geen cookies, geen tracking. <a href="https://kanz-ai-lab-nl.github.io/">KANZ AI Lab</a></footer></div>
+<script>
+(function(){
+var KEY="proefdagboek-v1";
+var S=load();
+function load(){try{var j=JSON.parse(localStorage.getItem(KEY));if(j&&j.task)return j}catch(e){}return{task:{name:"",checks:["",""],self:[]},trials:[]}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){say("Opslaan in de browser lukt niet. Gebruik 'Bewaar als bestand'.")}}
+function $(i){return document.getElementById(i)}
+function el(t,txt,cls){var e=document.createElement(t);if(txt!=null)e.textContent=txt;if(cls)e.className=cls;return e}
+function say(m){$("msg").textContent=m}
+function num(v){var n=parseFloat(String(v).replace(",","."));return isFinite(n)&&n>=0?n:null}
+function r1(n){return (Math.round(n*10)/10).toString().replace(".",",")}
+function avg(a){return a.reduce(function(x,y){return x+y},0)/a.length}
+
+function drawChecks(){
+ var c=$("checks");c.textContent="";
+ S.task.checks.forEach(function(v,i){
+  var d=el("div");var l=el("label","Controle "+(i+1));l.setAttribute("for","c"+i);
+  var inp=el("input");inp.id="c"+i;inp.maxLength=100;inp.value=v;inp.placeholder=i==0?"Bijvoorbeeld: de bedragen kloppen":"";
+  inp.addEventListener("input",function(){S.task.checks[i]=inp.value;save();drawFailed();drawOut()});
+  d.appendChild(l);d.appendChild(inp);
+  if(S.task.checks.length>1){var rm=el("button","Verwijder","link");rm.type="button";rm.addEventListener("click",function(){
+    if(S.trials.length&&!confirm("Er zijn al proeven opgeslagen. Verwijderen verschuift de controles in het overzicht. Doorgaan?"))return;
+    S.task.checks.splice(i,1);S.trials.forEach(function(t){t.failed=(t.failed||[]).filter(function(x){return x!==i}).map(function(x){return x>i?x-1:x})});save();drawChecks();drawFailed();drawOut()});d.appendChild(rm)}
+  c.appendChild(d)});
+ $("addcheck").disabled=S.task.checks.length>=5;
+}
+function drawFailed(){
+ var f=$("failed");f.textContent="";var any=false;
+ S.task.checks.forEach(function(v,i){if(!v.trim())return;any=true;
+  var d=el("div",null,"chk");var cb=el("input");cb.type="checkbox";cb.id="f"+i;cb.value=i;
+  var l=el("label",v);l.setAttribute("for","f"+i);l.style.cssText="margin:0;font-family:Georgia,serif;font-weight:400;font-size:1rem";
+  d.appendChild(cb);d.appendChild(l);f.appendChild(d)});
+ if(!any)f.appendChild(el("span","Voeg eerst controles toe.","small"));
+}
+function drawSelf(){
+ var s=$("selflist");
+ if(!S.task.self.length){s.textContent="Nog geen zelf-metingen.";return}
+ s.textContent="Zelf gedaan: "+S.task.self.map(r1).join(", ")+" min. ";
+ var u=el("button","laatste verwijderen","link");u.type="button";u.addEventListener("click",function(){S.task.self.pop();save();drawSelf();drawOut()});s.appendChild(u);
+}
+function total(t){return t.p+t.w+t.c+t.f}
+function drawOut(){
+ var o=$("out");o.textContent="";
+ var T=S.trials;
+ if(!S.task.name.trim()&&!T.length&&!S.task.self.length){o.appendChild(el("p","Het overzicht verschijnt zodra je een taak en een proef hebt ingevuld.","small"));return}
+ var h=el("h3",S.task.name.trim()||"(taak zonder naam)");o.appendChild(h);
+ var checks=S.task.checks.map(function(v){return v.trim()});
+ var ul=el("p",null,"small");ul.textContent="Je controles: "+(checks.filter(Boolean).join("; ")||"geen ingevuld");o.appendChild(ul);
+ if(!T.length){o.appendChild(el("p","Nog geen proeven met AI.","small"));return}
+ var tot=T.map(total),n=T.length;
+ var st=el("div",null,"stats");
+ function stat(big,small){var d=el("div",null,"card");d.appendChild(el("div",big,"big"));d.appendChild(el("div",small,"small"));st.appendChild(d)}
+ stat(r1(avg(tot))+" min","gemiddeld per proef met AI, alles meegeteld ("+n+" proeven)");
+ var sp=T.reduce(function(a,t){return a+t.p+t.w},0),sc=T.reduce(function(a,t){return a+t.c+t.f},0),all=sp+sc;
+ stat(all>0?Math.round(100*sc/all)+"%":"-","van de tijd ging naar nakijken en herstellen");
+ if(S.task.self.length)stat(r1(avg(S.task.self))+" min","gemiddeld zelf doen ("+S.task.self.length+" metingen)");
+ var accN=T.filter(function(t){return t.acc==="ja"}).length;
+ stat(accN+" van "+n,"keer gebruikt na herstellen");
+ o.appendChild(st);
+ var bar=el("div",null,"bar");bar.setAttribute("role","img");
+ var parts=[["Vragen",T.reduce(function(a,t){return a+t.p},0),"#e6b48f"],["Wachten",T.reduce(function(a,t){return a+t.w},0),"#d9d0c3"],["Nakijken",T.reduce(function(a,t){return a+t.c},0),"#c85a1e"],["Herstellen",T.reduce(function(a,t){return a+t.f},0),"#7a2e10"]];
+ bar.setAttribute("aria-label","Verdeling van de tijd: "+parts.map(function(p){return p[0]+" "+r1(p[1])+" min"}).join(", "));
+ parts.forEach(function(p){if(all>0&&p[1]>0){var s=el("span");s.style.width=(100*p[1]/all)+"%";s.style.background=p[2];bar.appendChild(s)}});
+ o.appendChild(bar);
+ var lg=el("p",null,"small");lg.textContent=parts.map(function(p){return p[0]+" "+r1(p[1])+" min"}).join(" · ");o.appendChild(lg);
+ // fouten per controle
+ if(checks.some(Boolean)){
+  var tw=el("div",null,"tablewrap");var tb=el("table");var hr=el("tr");["Controle","Niet gehaald"].forEach(function(x){hr.appendChild(el("th",x))});tb.appendChild(hr);
+  checks.forEach(function(v,i){if(!v)return;var c=T.filter(function(t){return (t.failed||[]).indexOf(i)>-1}).length;var r=el("tr");r.appendChild(el("td",v));r.appendChild(el("td",c+" van "+n));tb.appendChild(r)});
+  tw.appendChild(tb);o.appendChild(tw)}
+ // proeven
+ var tw2=el("div",null,"tablewrap");var t2=el("table");var h2=el("tr");["Datum","Tool","Totaal","Gebruikt","Notitie"].forEach(function(x){h2.appendChild(el("th",x))});h2.appendChild(el("th","",""));t2.appendChild(h2);
+ T.forEach(function(t,i){var r=el("tr");r.appendChild(el("td",t.date));r.appendChild(el("td",t.tool||"-"));r.appendChild(el("td",r1(total(t))+" min"));r.appendChild(el("td",t.acc));r.appendChild(el("td",t.note||""));
+  var td=el("td",null,"noprint");var b=el("button","Verwijder","link");b.type="button";b.addEventListener("click",function(){if(confirm("Deze proef verwijderen?")){S.trials.splice(i,1);save();drawOut()}});td.appendChild(b);r.appendChild(td);t2.appendChild(r)});
+ tw2.appendChild(t2);o.appendChild(tw2);
+ // eerlijke conclusie, zonder advies
+ var box=el("div",null,"card");box.appendChild(el("h3","Wat dit overzicht wel en niet zegt"));
+ var lines=[];
+ if(n<5)lines.push("Je hebt "+n+" proef"+(n==1?"":"en")+". Dat is te weinig om iets over jouw taak te zeggen. Doe er minstens 5.");
+ else lines.push("Met "+n+" proeven zie je een eerste patroon, geen bewijs.");
+ if(S.task.self.length==0)lines.push("Er is geen zelf-meting. Zonder vergelijking weet je niet of AI sneller of langzamer was.");
+ else if(S.task.self.length<3)lines.push("Je hebt maar "+S.task.self.length+" zelf-meting"+(S.task.self.length==1?"":"en")+". Doe er minstens 3 voor een eerlijke vergelijking.");
+ if(S.task.self.length>0){var d=avg(tot)-avg(S.task.self);var pct=Math.abs(d)/avg(S.task.self)*100;
+  if(pct<15)lines.push("Het verschil tussen AI ("+r1(avg(tot))+" min) en zelf doen ("+r1(avg(S.task.self))+" min) is klein, minder dan 15%. Bij zo weinig metingen kan dat toeval zijn.");
+  else lines.push("Gemiddeld ging het met AI "+(d<0?"sneller":"langzamer")+": "+r1(avg(tot))+" tegen "+r1(avg(S.task.self))+" minuten. Dat verschil is "+Math.round(pct)+"%. Met zo weinig metingen is dat een aanwijzing, geen zekerheid.")}
+ var fails=T.reduce(function(a,t){return a+(t.failed||[]).length},0);
+ lines.push(fails===0?"Geen enkele controle faalde. Vraag je af of je controles streng genoeg waren.":"In totaal faalde er "+fails+" keer een controle. Kijk welke controle het vaakst faalt: dat is waar je bij deze taak moet blijven opletten.");
+ lines.push("Dit zegt niets over andere taken, andere tools of een andere week. Of je doorgaat met AI voor deze taak beslis je zelf.");
+ lines.forEach(function(x){box.appendChild(el("p",x))});o.appendChild(box);
+}
+$("addcheck").addEventListener("click",function(){if(S.task.checks.length<5){S.task.checks.push("");save();drawChecks();var l=$("c"+(S.task.checks.length-1));if(l)l.focus()}});
+$("tname").value=S.task.name;
+$("tname").addEventListener("input",function(){S.task.name=$("tname").value;save();drawOut()});
+$("addself").addEventListener("click",function(){var v=num($("selft").value);if(v===null){say("Vul een tijd in minuten in.");return}S.task.self.push(v);$("selft").value="";save();drawSelf();drawOut();say("Zelf-meting toegevoegd.")});
+$("tdate").value=new Date().toISOString().slice(0,10);
+$("tf").addEventListener("submit",function(e){e.preventDefault();
+ if(!S.task.checks.some(function(c){return c.trim()})){say("Vul eerst minstens één controle in bij stap 1.");return}
+ var v=[num($("t1").value),num($("t2").value),num($("t3").value),num($("t4").value)];
+ if(v.some(function(x){return x===null})){say("Vul alle vier de tijden in (0 mag).");return}
+ var failed=[];document.querySelectorAll("#failed input:checked").forEach(function(c){failed.push(parseInt(c.value,10))});
+ var acc=document.querySelector("input[name=acc]:checked");
+ S.trials.push({date:$("tdate").value,tool:$("ttool").value.trim(),p:v[0],w:v[1],c:v[2],f:v[3],failed:failed,acc:acc?acc.value:"nee",note:$("tnote").value.trim()});
+ save();$("tf").reset();$("tdate").value=new Date().toISOString().slice(0,10);drawOut();say("Proef opgeslagen. Je overzicht staat hieronder bijgewerkt.");
+});
+$("print").addEventListener("click",function(){window.print()});
+$("exp").addEventListener("click",function(){var b=new Blob([JSON.stringify(S,null,1)],{type:"application/json"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="proefdagboek.json";document.body.appendChild(a);a.click();a.remove();say("Bestand bewaard in je downloads.")});
+$("impb").addEventListener("click",function(){$("imp").click()});
+$("imp").addEventListener("change",function(){var f=this.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{
+ var j=JSON.parse(r.result);if(!j||!j.task||!Array.isArray(j.trials)||!Array.isArray(j.task.checks))throw 0;
+ var ok=function(x){return typeof x==="number"&&isFinite(x)&&x>=0};
+ var T=j.trials.filter(function(t){return t&&ok(t.p)&&ok(t.w)&&ok(t.c)&&ok(t.f)}).map(function(t){return{date:String(t.date||"").slice(0,10),tool:String(t.tool||"").slice(0,60),p:t.p,w:t.w,c:t.c,f:t.f,failed:(Array.isArray(t.failed)?t.failed:[]).filter(Number.isInteger),acc:t.acc==="ja"?"ja":"nee",note:String(t.note||"").slice(0,300)}});
+ if(S.trials.length&&!confirm("Dit vervangt je huidige gegevens. Doorgaan?"))return;
+ S={task:{name:String(j.task.name||"").slice(0,120),checks:j.task.checks.slice(0,5).map(function(c){return String(c).slice(0,100)}),self:(Array.isArray(j.task.self)?j.task.self:[]).filter(ok)},trials:T};
+ if(!S.task.checks.length)S.task.checks=[""];
+ save();$("tname").value=S.task.name;drawAll();say("Bestand geopend.")}catch(e){say("Dit bestand is geen proefdagboek.")}};r.readAsText(f);this.value=""});
+$("wipe").addEventListener("click",function(){if(confirm("Alle gegevens van dit proefdagboek uit je browser wissen?")){try{localStorage.removeItem(KEY)}catch(e){}S={task:{name:"",checks:["",""],self:[]},trials:[]};$("tname").value="";drawAll();say("Alles gewist.")}});
+function drawAll(){drawChecks();drawFailed();drawSelf();drawOut()}
+drawAll();
+})();
+</script></body></html>
