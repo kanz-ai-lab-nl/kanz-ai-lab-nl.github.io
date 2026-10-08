@@ -1,8 +1,13 @@
 <!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Proefdagboek - één taak, je eigen controles</title><link rel="stylesheet" href="style.css"></head>
-<body><div class="wrap">
-<nav><a href="index.html">Verhaal</a><a href="proefdagboek.html" aria-current="page">Proefdagboek</a></nav>
+<title>Proefdagboek - één taak, je eigen controles</title><link rel="stylesheet" href="/assets/kanz.css"><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="top"><div class="w">
+<a class="brand" href="/"><i></i>KANZ AI Lab</a>
+<div class="menu"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Aanbod</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div>
+<details class="mm"><summary>Menu</summary><div class="mi"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Aanbod</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div></details>
+</div></header>
+<div class="wrap"><p class="crumb"><a href="/">&larr; KANZ AI Lab</a></p><div class="tabs noprint"><a href="/proefdagboek/">Verhaal</a><a href="/proefdagboek/proefdagboek.html" aria-current="page">Proefdagboek</a></div>
 <h1>Proefdagboek</h1>
 <div class="note noprint"><strong>Geen persoonsgegevens invullen.</strong> Geen namen, adressen of klantinformatie. Alles blijft in je eigen browser; er wordt niets verzonden.</div>
 
@@ -105,7 +110,7 @@ function drawOut(){
  stat(accN+" van "+n,"keer gebruikt na herstellen");
  o.appendChild(st);
  var bar=el("div",null,"bar");bar.setAttribute("role","img");
- var parts=[["Vragen",T.reduce(function(a,t){return a+t.p},0),"#e6b48f"],["Wachten",T.reduce(function(a,t){return a+t.w},0),"#d9d0c3"],["Nakijken",T.reduce(function(a,t){return a+t.c},0),"#c85a1e"],["Herstellen",T.reduce(function(a,t){return a+t.f},0),"#7a2e10"]];
+ var parts=[["Vragen",T.reduce(function(a,t){return a+t.p},0),"#9db8f5"],["Wachten",T.reduce(function(a,t){return a+t.w},0),"#cbd5e1"],["Nakijken",T.reduce(function(a,t){return a+t.c},0),"#0b4fd8"],["Herstellen",T.reduce(function(a,t){return a+t.f},0),"#0a2a73"]];
  bar.setAttribute("aria-label","Verdeling van de tijd: "+parts.map(function(p){return p[0]+" "+r1(p[1])+" min"}).join(", "));
  parts.forEach(function(p){if(all>0&&p[1]>0){var s=el("span");s.style.width=(100*p[1]/all)+"%";s.style.background=p[2];bar.appendChild(s)}});
  o.appendChild(bar);
