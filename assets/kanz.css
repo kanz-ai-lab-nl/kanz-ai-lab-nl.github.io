@@ -96,3 +96,18 @@ details.mm{display:none}
  section.s{padding-top:2.6rem}
  .acts a{flex:1;text-align:center}
 }
+/* Markdown-pagina's (gids) via _layouts/default.html */
+.md{overflow-wrap:break-word}
+.md h3{font-size:1.15rem;line-height:1.3;margin:1.8rem 0 .4rem}
+.md p,.md ul,.md ol{margin:.7rem 0}
+.md hr{border:0;border-top:1px solid var(--line);margin:2.4rem 0}
+.md blockquote{margin:1.2rem 0;padding:.7rem 1rem;border-left:4px solid var(--ac);background:var(--tint);border-radius:0 8px 8px 0}
+.md blockquote p{margin:0}
+.md code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;background:var(--tint);padding:.1rem .3rem;border-radius:4px}
+.md pre{background:var(--tint);border:1px solid var(--line);border-radius:10px;padding:1rem;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.86rem;line-height:1.55;max-width:100%}
+.md pre code{background:none;padding:0;font-size:inherit}
+.md table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;font-size:.92rem;margin:1rem 0}
+.md th,.md td{border-bottom:1px solid var(--line);padding:.5rem .65rem;text-align:left;vertical-align:top}
+.md th{background:var(--tint)}
+.md .task-list-item{list-style:none;margin-left:-1.2rem}
+.md .task-list-item input{margin-right:.5rem;accent-color:var(--ac)}
