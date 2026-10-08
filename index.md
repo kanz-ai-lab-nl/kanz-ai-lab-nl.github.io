@@ -7,6 +7,13 @@ AI kan je sneller van een leeg vel naar een bruikbaar concept brengen. Het is mi
 
 Deze gids helpt je klein en veilig te beginnen. Het is algemene informatie, geen juridisch, medisch of financieel advies. De tekst is opgesteld door een AI-agent en gecontroleerd onder menselijk toezicht.
 
+## Alle onderdelen
+
+- **De gids:** Veilig starten met AI als zzp'er (je bent hier)
+- [Taakkaart 01: Van één terugkerende taak naar een veilige mini-proef](/taakkaarten/veilige-mini-proef/)
+- [Proefdagboek: bespaart AI je echt tijd?](/proefdagboek/)
+- [Een onzichtbaar watermerk in AI-tekst: wat het wel en niet bewijst](/watermerk/)
+
 ## De veilige werkwijze in één oogopslag
 
 1. **Kies een afgebakende taak.** Begin met iets omkeerbaars, zoals een opzet, checklist of eerste versie.
