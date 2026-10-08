@@ -1,4 +1,12 @@
 title: KANZ AI Lab
 description: Gratis, praktische AI-gidsen voor Nederlandse zzp'ers
 theme: jekyll-theme-primer
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 lang: nl-NL
+defaults:
+  - scope:
+      path: "gids"
+    values:
+      image: /img/cover-gids.png
