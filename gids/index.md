@@ -104,7 +104,7 @@ Kun je dit niet duidelijk vaststellen? Voer dan geen persoonsgegevens of vertrou
 2. **Alleen na schoonmaken:** klantcontext die je volledig anonimiseert en verkort.
 3. **Niet toegestaan:** gevoelige persoonsgegevens, geheimen, toegangsgegevens en volledige klantbestanden.
 
-Werk je met medewerkers of onderaannemers, leg dan ook vast welke AI-tools wel en niet zijn toegestaan. De Europese AI-verordening (AI Act) bevat bovendien een bepaling over AI-geletterdheid (artikel 4): wie AI namens een organisatie gebruikt, moet voldoende kennis en vaardigheden hebben voor de taak en de risico's. Welke verplichtingen precies gelden, hangt af van jouw rol en toepassing.
+Werk je met medewerkers of onderaannemers, leg dan ook vast welke AI-tools wel en niet zijn toegestaan. De Europese AI-verordening (AI Act) bevat een bepaling over AI-geletterdheid (artikel 4): organisaties die AI aanbieden of gebruiken, moeten maatregelen nemen om de AI-geletterdheid te bevorderen van hun personeel en van anderen die namens hen met AI werken, passend bij hun kennis, ervaring en de manier waarop ze AI gebruiken. Welke verplichtingen precies gelden, hangt af van jouw rol en toepassing.
 
 ---
 
