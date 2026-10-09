@@ -50,6 +50,7 @@ section.s{padding:4.2rem 0 0}
 .dark h2{color:#fff;font-size:clamp(2.2rem,5vw,3.6rem);line-height:.98;letter-spacing:-.05em;font-weight:800;margin:1.2rem 0 1.4rem}
 .dark p{color:#d8d9dc;font-size:1.1rem;margin:0 0 1rem;max-width:30rem}
 .dark .btn{margin-top:1rem}
+.dark p a{color:var(--lime)}
 .dark .tilep{background:var(--ink2);border-radius:24px;padding:.8rem}
 .dark .tilep img{display:block;width:100%;border-radius:16px}
 .ex{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
