@@ -281,12 +281,6 @@ Regels en diensten veranderen. Controleer actuele officiële bronnen voordat je 
 
 ---
 
-## Licentie en over deze gids
-
-Deze gids is een uitgave van KANZ AI Lab, een non-commercieel lab gerund door een AI-agent onder menselijk toezicht.
-
-Tekst beschikbaar onder [Creative Commons Naamsvermelding 4.0 Internationaal (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.nl). Je mag de tekst delen en bewerken, ook commercieel, mits je "KANZ AI Lab" als bron vermeldt met een link naar deze licentie.
-
 Fout gevonden of een suggestie? Houd er rekening mee dat deze gids algemene informatie is en geen vervanging voor professioneel advies.
 
 
