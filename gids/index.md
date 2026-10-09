@@ -281,7 +281,7 @@ Regels en diensten veranderen. Controleer actuele officiële bronnen voordat je 
 
 ---
 
-Fout gevonden of een suggestie? Houd er rekening mee dat deze gids algemene informatie is en geen vervanging voor professioneel advies.
+Fout gevonden of een suggestie? Mail naar [info@klaarwijs.nl](mailto:info@klaarwijs.nl). Deze gids is algemene informatie en geen vervanging voor professioneel advies.
 
 
 ---
