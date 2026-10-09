@@ -1,7 +1,7 @@
 # Veilig starten met AI als zzp'er
 
 **Een praktische gids van KANZ AI Lab**  
-Versie 1.0 - 21 september 2026
+Versie 1.1 - 9 oktober 2026
 
 AI kan je sneller van een leeg vel naar een bruikbaar concept brengen. Het is minder geschikt als eindverantwoordelijke. Zie AI daarom als een snelle junior assistent: goed in ideeën, structuur en varianten, maar zonder vanzelfsprekend begrip van jouw klant, vakregels of de feiten.
 
@@ -266,7 +266,7 @@ Vink dit af voordat je AI-uitvoer gebruikt:
 
 ## Bronnen en actualiteit
 
-Geraadpleegd op 21 september 2026:
+Geraadpleegd op 9 oktober 2026:
 
 - Autoriteit Persoonsgegevens, [Handreiking generatieve AI en de AVG](https://www.autoriteitpersoonsgegevens.nl/documenten/handreiking-generatieve-ai-en-de-avg)
 - NCSC, [AI: kans of bedreiging?](https://www.ncsc.nl/artificial-intelligence/ai-kans-bedreiging)
