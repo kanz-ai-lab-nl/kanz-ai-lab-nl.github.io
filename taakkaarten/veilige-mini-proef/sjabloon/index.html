@@ -16,7 +16,7 @@
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="900">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/assets/kanz.css">
 <style>
 :root{
   --paper:#f6f3ec;
@@ -164,10 +164,53 @@ footer b{color:var(--ink)}
 a.button,a.button:visited,a.button:active{color:var(--paper);text-decoration:none}
 a.button.ghost,a.button.ghost:visited{color:var(--ink)}
 a.button.text,a.button.text:visited{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+
+/* KANZ nieuwe stijl */
+:root{--paper:#f4f1ea;--band:#e9e5da;--ink:#16171b;--muted:#5d6066;--line:#e2ded3;--green:#16171b;--rust:#16171b;--rust-band:#d7f24b;--ghost:#e2ded3;--serif:"Helvetica Neue",Helvetica,"Segoe UI","Arial Black",Arial,system-ui,sans-serif;--sans:"Helvetica Neue",Helvetica,"Segoe UI",Arial,system-ui,sans-serif;--mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace}
+body{font-size:18px}
+h1,h2,h3{font-family:var(--serif);font-weight:800;letter-spacing:-.04em;color:var(--ink)}
+main{max-width:76rem}
+.subnav{max-width:76rem;margin:0 auto;padding:1.4rem 1.5rem 0}
+.subnav .tabs{margin:0}
+.dateline{border-bottom:1px solid var(--ink);color:var(--muted)}
+.hero{padding:2.4rem 1.5rem 4rem}.hero .dateline{border-top:0;padding-top:0}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);line-height:.98;letter-spacing:-.055em;max-width:14ch;margin:2rem 0 1.4rem}
+.dek{color:#3a3d43;font-size:clamp(18px,1.8vw,22px)}
+.button{border-radius:999px;background:var(--lime,#d7f24b);color:var(--ink);border:1px solid var(--ink);font:700 15px/1.2 var(--sans);letter-spacing:0;padding:15px 26px}
+.button:hover{background:#c9e53a}
+.button.ghost{background:transparent}
+.button.text{border-color:transparent;background:transparent;text-decoration:underline}
+a.button,a.button:visited,a.button:active{color:var(--ink)}
+a.button.ghost,a.button.ghost:visited{color:var(--ink)}
+a.button.text,a.button.text:visited{color:var(--muted)}
+.label{color:var(--muted);font-weight:500}.label.rust{color:var(--lime,#d7f24b)}
+.contains{border-top:1px solid var(--ink)}
+.contains li span,.route li span{color:var(--ink)}
+.safety{background:#d7f24b;border:1px solid var(--ink);border-radius:28px;margin:0 1.5rem;padding:2rem 2.2rem}
+.safety b{font-family:var(--serif);font-weight:800;letter-spacing:-.03em}
+.safety p{color:#2a2c31}
+.route{padding:4.5rem 1.5rem}
+.route li{font-family:var(--serif);font-weight:800;letter-spacing:-.03em;border-top:1px solid var(--ink)}
+.route li span{font-weight:400}
+.notyet{background:var(--ink);color:#fff;border:0;border-radius:36px;margin:0 1.5rem;padding:3.5rem 2.5rem}
+.notyet h2{color:#fff}
+.notyet li{border-top:1px solid #3a3d43;color:#e6e7ea}
+.notyet li span{color:var(--lime,#d7f24b)}
+.sheet{padding:3rem 1.5rem 5rem}
+.step{border-top:2px solid var(--ink)}
+.step-no{font-weight:800;color:var(--ink)}
+.writing-lines{background-color:transparent}
+.answer,.synthetic,.card{border-radius:20px}
+blockquote{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);font-family:var(--serif);font-weight:700;letter-spacing:-.02em}
+blockquote b{color:var(--ink)}
+.license{border-top:2px solid var(--ink)}
+.page-end a{color:var(--ink)}
+@media(max-width:640px){.hero{padding:1.6rem 1.25rem 3rem}.hero h1{font-size:2.7rem}.safety,.notyet{margin:0 1rem;padding:1.6rem 1.3rem;border-radius:24px}.route,.sheet{padding-left:1.25rem;padding-right:1.25rem}.subnav{padding:1rem 1.25rem 0}}
+@media print{.top,.subnav,footer.site{display:none!important}body{background:#fff!important}.safety,.notyet{background:#fff!important;color:#000!important;border:1px solid #000}.notyet h2,.notyet li{color:#000!important}}
 </style>
 </head>
 <body>
-<div class="mast"><a href="/" class="wordmark">KANZ<span>AI Lab</span></a><nav aria-label="Onderdelen"><a href="/taakkaarten/veilige-mini-proef/">Overzicht</a><a href="/taakkaarten/veilige-mini-proef/sjabloon/" aria-current="page">Leeg werkblad</a><a href="/taakkaarten/veilige-mini-proef/casus/">Casus</a><a href="/taakkaarten/veilige-mini-proef/bronnen/">Bronnen</a></nav></div>
+<header class="top"><div class="w"><a class="brand" href="/"><i></i>KANZ AI Lab</a><div class="menu"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Aanbod</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div><details class="mm"><summary>Menu</summary><div class="mi"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Aanbod</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div></details></div></header><div class="subnav"><div class="tabs noprint"><a href="/taakkaarten/veilige-mini-proef/">Overzicht</a><a href="/taakkaarten/veilige-mini-proef/sjabloon/" aria-current="page">Leeg werkblad</a><a href="/taakkaarten/veilige-mini-proef/casus/">Casus</a><a href="/taakkaarten/veilige-mini-proef/bronnen/">Bronnen</a></div></div>
 <main>
 <section class="sheet">
   <div class="sheet-head"><p class="label">Leeg, herbruikbaar sjabloon</p><h1>Werk klein en nakijkbaar.</h1><p>Dit werkblad keurt niets goed. Het helpt je één proef beschrijven. Gebruik alleen fictieve of synthetische gegevens. Laat de tool niets publiceren, verzenden, bestellen of aanpassen.</p></div>
@@ -227,6 +270,6 @@ var steps=[['01','Kies één terugkerende taak',['Welke ene taak wil je onderzoe
 function downloadMd(){var text=['# Van één terugkerende taak naar een veilige mini-proef','','KANZ Taakkaart 01 · versie 1.0 · 22 september 2026',''];steps.forEach(function(s){text.push('## '+parseInt(s[0],10)+'. '+s[1]);s[2].forEach(function(q){text.push(q+':','')});text.push('')});var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text.join('\n')],{type:'text/markdown'}));a.download='kanz-veilige-mini-proef-sjabloon.md';document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(a.href)}
 function printPage(){window.print()}
 </script>
-<footer><b>KANZ AI Lab</b><span>Open, praktisch, onder menselijk toezicht.</span></footer>
+<footer class="site"><div class="w">KANZ AI Lab</div></footer>
 </body>
 </html>
