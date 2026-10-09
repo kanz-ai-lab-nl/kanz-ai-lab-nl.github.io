@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title"><title id="title">Eén taak, een concept, eigen controles</title>
+<rect width="1200" height="675" rx="28" fill="#e2ded3"/>
+<rect x="400" y="84" width="736" height="510" rx="38" fill="#16171b"/>
+<text x="452" y="145" fill="#d7f24b" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="3">EEN KLEINE START</text>
+<rect x="452" y="189" width="289" height="324" rx="22" fill="#f4f1ea"/>
+<text x="480" y="240" fill="#16171b" font-family="Arial, sans-serif" font-size="25" font-weight="700">01 / Eén taak</text>
+<path d="M483 294h220M483 330h170M483 366h197" stroke="#5d6066" stroke-width="11" stroke-linecap="round"/>
+<rect x="480" y="417" width="230" height="57" rx="16" fill="#d7f24b"/>
+<text x="502" y="454" fill="#16171b" font-family="Arial, sans-serif" font-size="23" font-weight="700">Alleen een concept</text>
+<text x="788" y="240" fill="#f4f1ea" font-family="Arial, sans-serif" font-size="25" font-weight="700">02 / Zelf controleren</text>
+<g stroke="#d7f24b" fill="none" stroke-width="5"><rect x="785" y="280" width="29" height="29" rx="6"/><rect x="785" y="347" width="29" height="29" rx="6"/><rect x="785" y="414" width="29" height="29" rx="6"/></g>
+<g fill="#f4f1ea" font-family="Arial, sans-serif" font-size="24"><text x="834" y="304">Klopt de inhoud?</text><text x="834" y="371">Geen verzinsels?</text><text x="834" y="438">Grens gevolgd?</text></g>
+<circle cx="219" cy="231" r="73" fill="#f4f1ea" stroke="#16171b" stroke-width="8"/>
+<path d="M148 221c-6-101 145-101 147 2l-30-28-81 5z" fill="#16171b"/>
+<path d="M112 595V395c0-99 203-99 207 0l14 200" fill="#d7f24b" stroke="#16171b" stroke-width="8"/>
+<path d="M160 411l-29 109h178l103-151" fill="none" stroke="#16171b" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="413" cy="366" r="18" fill="#f4f1ea" stroke="#16171b" stroke-width="6"/>
+<path d="M36 596h1125" stroke="#16171b" stroke-width="6"/>
+</svg>
