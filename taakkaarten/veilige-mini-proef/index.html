@@ -238,6 +238,6 @@ var steps=[['01','Kies één terugkerende taak',['Welke ene taak wil je onderzoe
 function downloadMd(){var text=['# Van één terugkerende taak naar een veilige mini-proef','','KANZ Taakkaart 01 · versie 1.0 · 22 september 2026',''];steps.forEach(function(s){text.push('## '+parseInt(s[0],10)+'. '+s[1]);s[2].forEach(function(q){text.push(q+':','')});text.push('')});var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text.join('\n')],{type:'text/markdown'}));a.download='kanz-veilige-mini-proef-sjabloon.md';document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(a.href)}
 function printPage(){window.print()}
 </script>
-<footer class="site"><div class="w">KANZ AI Lab</div></footer>
+<footer class="site"><div class="w">© Klaarwijs</div></footer>
 </body>
 </html>
