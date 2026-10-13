@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Een bron erbij is nog geen bewijs | KANZ AI Lab</title>
+<meta name="description" content="Een bron bij een AI-antwoord is nog geen bewijs. Zo controleer je per bewering of de bron het ook zegt, met een werkblad.">
+<meta property="og:title" content="Een bron erbij is nog geen bewijs"><meta property="og:description" content="Een bron bij een AI-antwoord is nog geen bewijs. Zo controleer je per bewering of de bron het ook zegt, met een werkblad."><meta property="og:type" content="article"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="KANZ AI Lab"><meta property="og:url" content="https://kanz-ai-lab-nl.github.io/bron-bewijs/"><meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/kanz.css">
+<style>
+.kw{background:#fff;border:1px solid var(--ink);border-radius:24px;padding:1.2rem 1.2rem 1.4rem;margin:2rem 0;font-size:1rem}
+.kw h1{display:none}
+.kw p{margin:.5rem 0}
+.kw label{display:block;font-weight:700;margin:.8rem 0 .3rem}
+.kw textarea,.kw input[type=text]{width:100%;padding:.7rem .8rem;border:1px solid var(--ink);border-radius:14px;background:var(--field);font:inherit;color:var(--ink)}
+.kw textarea{min-height:9rem}
+.kw button{font:inherit;font-weight:700;border:1px solid var(--ink);background:var(--lime);color:var(--ink);padding:.7rem 1.2rem;border-radius:999px;cursor:pointer}
+.kw button.alt{background:transparent}
+.kw button[aria-pressed=true]{background:var(--lime)}
+.kw button[aria-pressed=false]{background:transparent}
+.kw .group{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0}
+.kw .card{background:var(--field);border:1px solid var(--line);border-radius:18px;padding:1rem;margin:.9rem 0}
+.kw .card .n{display:inline-block;background:var(--ink);color:var(--lime);border-radius:999px;padding:0 .6rem;font-size:.8rem;font-weight:700}
+.kw .claim{margin:.5rem 0;font-weight:700}
+.kw .row{display:flex;gap:.6rem;align-items:flex-start;margin:.4rem 0}
+.kw .row input[type=checkbox]{width:1.3rem;height:1.3rem;margin-top:.2rem;flex:none;accent-color:var(--ink)}
+.kw .row label{margin:0;font-weight:400}
+.kw .status{margin-top:.6rem;font-weight:700}
+.kw .status.ok{color:#1d5f1d}.kw .status.stop{color:#8a1c1c}.kw .status.wait{color:var(--mute)}
+.kw .sum{border:1px solid var(--ink);border-radius:16px;padding:.8rem 1rem;background:var(--lime);margin-top:1rem}
+.kw .bigbox{background:var(--field);border:1px solid var(--line);border-radius:18px;padding:1rem;margin:1rem 0}
+.kw .big{font-size:2.6rem;font-weight:800;line-height:1;font-family:var(--head)}
+.kw .bars{margin-top:1rem}
+.kw .bar{display:grid;grid-template-columns:12rem 1fr 3rem;gap:.6rem;align-items:center;margin:.7rem 0}
+.kw .track{background:var(--tile);border-radius:999px;height:1.3rem;overflow:hidden}
+.kw .fill{height:100%;background:var(--ink);border-radius:999px;transition:width .3s}
+.kw .bar.sel .fill{background:#7da92b}.kw .bar.sel{font-weight:700}
+.kw .val{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.kw .note2{font-size:.9rem;color:var(--mute)}
+@media(max-width:560px){.kw .bar{grid-template-columns:7.2rem 1fr 2.6rem;font-size:.85rem}}
+</style></head>
+<body>
+<header class="top"><div class="w"><a class="brand" href="/"><i></i>KANZ AI Lab</a><div class="menu"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Zo begin je</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div><details class="mm"><summary>Menu</summary><div class="mi"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Zo begin je</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div></details></div></header><article class="art"><p class="crumb"><a href="/">&larr; KANZ AI Lab</a></p><span class="tag">Praktische gids</span>
+<h1>Een bron erbij is nog geen bewijs</h1><p class="small">13 oktober 2026</p>
+<figure><svg viewBox="0 0 640 260" role="img" aria-label="Een pagina met een link, een vergrootglas en drie vinkjes" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="260" rx="14" fill="#f9f8f4"/><rect x="70" y="40" width="210" height="180" rx="12" fill="#fff" stroke="#16171b" stroke-width="3"/><g stroke="#16171b" stroke-width="5" stroke-linecap="round"><line x1="95" y1="75" x2="250" y2="75"/><line x1="95" y1="105" x2="225" y2="105"/><line x1="95" y1="135" x2="245" y2="135"/><line x1="95" y1="165" x2="200" y2="165"/></g><rect x="92" y="122" width="160" height="26" rx="6" fill="#d7f24b" opacity=".85"/><line x1="95" y1="135" x2="245" y2="135" stroke="#16171b" stroke-width="5" stroke-linecap="round"/><circle cx="330" cy="130" r="55" fill="none" stroke="#16171b" stroke-width="8"/><line x1="370" y1="170" x2="420" y2="220" stroke="#16171b" stroke-width="12" stroke-linecap="round"/><g fill="#16171b"><rect x="470" y="60" width="100" height="40" rx="20" fill="#d7f24b" stroke="#16171b" stroke-width="3"/><rect x="470" y="110" width="100" height="40" rx="20" fill="#d7f24b" stroke="#16171b" stroke-width="3"/><rect x="470" y="160" width="100" height="40" rx="20" fill="#fff" stroke="#16171b" stroke-width="3"/></g><g stroke="#16171b" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="490,80 500,90 520,68"/><polyline points="490,130 500,140 520,118"/></g></svg></figure>
+<p>Je vraagt een AI-assistent iets en krijgt een antwoord met een bronvermelding. Dat geeft rust. Maar de vermelding zegt iets anders dan je denkt: iemand of iets heeft een pagina genoemd. Of die pagina de zin ook echt draagt, is een tweede vraag.</p>
+<p>Over die tweede vraag gaat dit stuk, en over een werkblad waarmee je hem zelf stelt.</p>
+<h2>Wat onderzoek laat zien</h2>
+<p>Een onderzoek van de Europese publieke omroepen (2025, testen in mei en juni 2025 met gratis versies van de assistenten): journalisten van 22 publieke omroepen in 18 landen, onder wie NOS/NPO, beoordeelden meer dan 3.000 antwoorden van ChatGPT, Copilot, Gemini en Perplexity op nieuwsvragen. Bij 45% van de antwoorden zat minstens één serieus probleem. Bij 31% ging het over de bronnen: ontbrekend, misleidend of onjuist toegeschreven.</p>
+<p>Een voorpublicatie uit 2026 (nog niet door vakgenoten beoordeeld) liet taalmodellen rapporten met bronverwijzingen schrijven en controleerde elke verwijzing apart, deels met modellen als beoordelaar. Bij de sterkste modellen werkten de meeste links en sloten de bronnen meestal aan op het onderwerp. Dat de bewering ook echt door de bron werd gedragen, kwam duidelijk minder vaak voor.</p>
+<p>Dit zijn momentopnames. Ze zeggen niet hoe goed een assistent nu gemiddeld is. Ze laten wel zien dat een genoemde bron en een gedragen bewering twee verschillende dingen zijn.</p>
+<p>Let op wat dat betekent. Soms ontbrak de bron. En als hij er was, zei hij niet altijd wat het antwoord beweerde.</p>
+<h2>Drie vragen in plaats van één</h2>
+<p>Controleer bij elke bewering die je wilt gebruiken drie dingen, in deze volgorde:</p>
+<ol><li>Bestaat de bron? Opent de link, is het de echte pagina?</li><li>Gaat de bron over dit onderwerp?</li><li>Draagt de bron precies deze bewering, voor dezelfde periode, dezelfde groep en dezelfde voorwaarden? Zoek de zin of het cijfer op de pagina en lees er omheen.</li></ol>
+<p>Vraag 3 vraagt dat je de bron zelf opent en leest. Sla die stap niet over.</p>
+<h2>Doe het per bewering</h2>
+<p>Controleer niet "het antwoord", maar één bewering tegelijk. Knip het antwoord zelf op in losse beweringen, een per regel. Zet bij elke bewering de plek in de bron waar je hem vond. Vind je die plek niet, dan gebruik je de bewering niet.</p>
+<p>Hieronder staat een werkblad om dat met de hand te doen. Het controleert niets automatisch en geeft geen garantie. Het helpt jou om niets over te slaan. Alles blijft in je browser; er wordt niets verstuurd of bewaard.</p>
+<div class="kw">
+<h1>Bewering voor bewering controleren</h1>
+<p class="lead">Zet elke bewering die je wilt controleren op een eigen regel. Elke regel wordt een kaartje. Je vinkt zelf af wat je in de bron hebt teruggevonden. Dit is een handmatig werkblad: het controleert niets zelf en knipt niets automatisch op.</p>
+<label for="inp">Beweringen, een per regel</label>
+<textarea id="inp" placeholder="Een bewering per regel. Geen persoonsgegevens invullen."></textarea>
+<p><button id="go" type="button">Maak kaartjes</button> <button class="alt" id="clr" type="button">Alles wissen</button> <button class="alt" id="cp" type="button">Kopieer overzicht</button></p>
+<div id="out" aria-live="polite"></div>
+<div id="sum" class="sum" hidden></div>
+<p id="msg" role="status" class="note2"></p>
+<p class="note2">Alles blijft in deze pagina. Er wordt niets verstuurd, opgeslagen of gevolgd. Sluit je het tabblad, dan is het weg.</p>
+<script>
+(function(){
+var inp=document.getElementById('inp'),out=document.getElementById('out'),sum=document.getElementById('sum'),msg=document.getElementById('msg');
+function split(t){return t.split(/\r?\n/).map(function(s){return s.trim()}).filter(function(s){return s.length>0})}
+function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
+function state(card){
+ var c=card.querySelectorAll('input[type=checkbox]'),q=card.querySelector('input[type=text]').value.trim(),st=card.querySelector('.status');
+ var a=c[0].checked,b=c[1].checked,z=c[2].checked;
+ var res;
+ if(a&&b&&z&&q){res=['ok','Volgens jouw controle gedekt door de bron. Dit is geen garantie.','ok']}
+ else if(z&&!q){res=['wait','Noteer de plek in de bron (zin, pagina of alinea).','wait']}
+ else if(!a||!b){res=['stop','Nog niet gebruiken: bron of onderwerp niet bevestigd.','stop']}
+ else {res=['stop','Nog niet gebruiken: de bewering is niet precies in de bron teruggevonden.','stop']}
+ st.className='status '+res[0];st.textContent=res[1];card.dataset.s=res[2];
+}
+function total(){
+ var cs=out.querySelectorAll('.card');if(!cs.length){sum.hidden=true;return}
+ var ok=0;cs.forEach(function(c){if(c.dataset.s==='ok')ok++});
+ sum.hidden=false;sum.textContent=ok+' van '+cs.length+' beweringen volgens jouw controle gedekt door een bron. De rest laat je weg of je zoekt verder.';
+}
+document.getElementById('go').addEventListener('click',function(){
+ msg.textContent='';var parts=split(inp.value);out.innerHTML='';
+ parts.forEach(function(p,i){
+  var d=document.createElement('div');d.className='card';
+  d.innerHTML='<span class="n">'+(i+1)+'</span><p class="claim">'+esc(p)+'</p>'+
+  '<div class="row"><input type="checkbox" id="a'+i+'"><label for="a'+i+'" style="margin:0;font-weight:400">De bron bestaat en de link opent de echte pagina.</label></div>'+
+  '<div class="row"><input type="checkbox" id="b'+i+'"><label for="b'+i+'" style="margin:0;font-weight:400">De bron gaat over dit onderwerp.</label></div>'+
+  '<div class="row"><input type="checkbox" id="c'+i+'"><label for="c'+i+'" style="margin:0;font-weight:400">De bron draagt precies deze bewering (zelfde periode, groep en voorwaarden), niet alleen dezelfde woorden of cijfers.</label></div>'+
+  '<label for="t'+i+'" style="font-weight:400;margin-top:8px">Waar in de bron? (zin, pagina of alinea)</label><input type="text" id="t'+i+'">'+
+  '<div class="status wait"></div>';
+  d.addEventListener('input',function(){state(d);total()});d.addEventListener('change',function(){state(d);total()});
+  out.appendChild(d);state(d);
+ });total();
+});
+document.getElementById('cp').addEventListener('click',function(){
+ var cards=out.querySelectorAll('.card');
+ if(!cards.length){msg.textContent='Er is nog niets om te kopieren. Maak eerst kaartjes.';return}
+ var lines=[];cards.forEach(function(c,i){
+  var cb=c.querySelectorAll('input[type=checkbox]');
+  lines.push((i+1)+'. '+c.querySelector('.claim').textContent+'\n   bron bestaat: '+(cb[0].checked?'ja':'nee')+'; over dit onderwerp: '+(cb[1].checked?'ja':'nee')+'; draagt bewering: '+(cb[2].checked?'ja':'nee')+'\n   plek in bron: '+(c.querySelector('input[type=text]').value||'-')+'\n   '+c.querySelector('.status').textContent);
+ });
+ var txt=lines.join('\n\n');
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){msg.textContent='Overzicht gekopieerd.'},function(){msg.textContent='Kopiëren lukte niet. Selecteer de kaartjes zelf.'})}
+ else{msg.textContent='Kopiëren wordt niet ondersteund in deze browser.'}
+});
+document.getElementById('clr').addEventListener('click',function(){msg.textContent='';inp.value='';out.innerHTML='';sum.hidden=true});
+})();
+</script></div>
+<h2>Een tweede paar ogen</h2>
+<p>Laat het antwoord ook door iemand anders lezen, bijvoorbeeld een collega, als er iets van afhangt. Een tweede lezer kan iets zien wat jij miste. Een garantie is het niet.</p>
+<p>Fout gezien? Mail naar <a href="mailto:info@klaarwijs.nl">info@klaarwijs.nl</a>.</p></article>
+<footer class="site"><div class="w">KANZ AI LAB</div></footer></body></html>
