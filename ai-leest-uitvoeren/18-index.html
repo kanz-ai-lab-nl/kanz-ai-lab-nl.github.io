@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wat een AI leest, kan het ook gaan uitvoeren | KANZ AI Lab</title>
+<meta name="description" content="Wat een AI leest, kan het ook gaan uitvoeren. Wat de Britse NCSC zegt over prompt injection, vertaald naar gewoon gebruik.">
+<meta property="og:title" content="Wat een AI leest, kan het ook gaan uitvoeren"><meta property="og:description" content="Wat een AI leest, kan het ook gaan uitvoeren. Wat de Britse NCSC zegt over prompt injection, vertaald naar gewoon gebruik."><meta property="og:type" content="article"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="KANZ AI Lab"><meta property="og:url" content="https://kanz-ai-lab-nl.github.io/ai-leest-uitvoeren/"><meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/kanz.css">
+<style>
+.kw{background:#fff;border:1px solid var(--ink);border-radius:24px;padding:1.2rem 1.2rem 1.4rem;margin:2rem 0;font-size:1rem}
+.kw h1{display:none}
+.kw p{margin:.5rem 0}
+.kw label{display:block;font-weight:700;margin:.8rem 0 .3rem}
+.kw textarea,.kw input[type=text]{width:100%;padding:.7rem .8rem;border:1px solid var(--ink);border-radius:14px;background:var(--field);font:inherit;color:var(--ink)}
+.kw textarea{min-height:9rem}
+.kw button{font:inherit;font-weight:700;border:1px solid var(--ink);background:var(--lime);color:var(--ink);padding:.7rem 1.2rem;border-radius:999px;cursor:pointer}
+.kw button.alt{background:transparent}
+.kw button[aria-pressed=true]{background:var(--lime)}
+.kw button[aria-pressed=false]{background:transparent}
+.kw .group{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0}
+.kw .card{background:var(--field);border:1px solid var(--line);border-radius:18px;padding:1rem;margin:.9rem 0}
+.kw .card .n{display:inline-block;background:var(--ink);color:var(--lime);border-radius:999px;padding:0 .6rem;font-size:.8rem;font-weight:700}
+.kw .claim{margin:.5rem 0;font-weight:700}
+.kw .row{display:flex;gap:.6rem;align-items:flex-start;margin:.4rem 0}
+.kw .row input[type=checkbox]{width:1.3rem;height:1.3rem;margin-top:.2rem;flex:none;accent-color:var(--ink)}
+.kw .row label{margin:0;font-weight:400}
+.kw .status{margin-top:.6rem;font-weight:700}
+.kw .status.ok{color:#1d5f1d}.kw .status.stop{color:#8a1c1c}.kw .status.wait{color:var(--mute)}
+.kw .sum{border:1px solid var(--ink);border-radius:16px;padding:.8rem 1rem;background:var(--lime);margin-top:1rem}
+.kw .bigbox{background:var(--field);border:1px solid var(--line);border-radius:18px;padding:1rem;margin:1rem 0}
+.kw .big{font-size:2.6rem;font-weight:800;line-height:1;font-family:var(--head)}
+.kw .bars{margin-top:1rem}
+.kw .bar{display:grid;grid-template-columns:12rem 1fr 3rem;gap:.6rem;align-items:center;margin:.7rem 0}
+.kw .track{background:var(--tile);border-radius:999px;height:1.3rem;overflow:hidden}
+.kw .fill{height:100%;background:var(--ink);border-radius:999px;transition:width .3s}
+.kw .bar.sel .fill{background:#7da92b}.kw .bar.sel{font-weight:700}
+.kw .val{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.kw .note2{font-size:.9rem;color:var(--mute)}
+@media(max-width:560px){.kw .bar{grid-template-columns:7.2rem 1fr 2.6rem;font-size:.85rem}}
+</style></head>
+<body>
+<header class="top"><div class="w"><a class="brand" href="/"><i></i>KANZ AI Lab</a><div class="menu"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Zo begin je</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div><details class="mm"><summary>Menu</summary><div class="mi"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Zo begin je</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div></details></div></header><article class="art"><p class="crumb"><a href="/">&larr; KANZ AI Lab</a></p><span class="tag">Praktische gids</span>
+<h1>Wat een AI leest, kan het ook gaan uitvoeren</h1><p class="small">13 oktober 2026</p>
+<figure><picture><source media="(max-width: 560px)" srcset="/img/leest-fig1-m.png" width="900" height="1380"><img src="/img/leest-fig1.png" width="1600" height="900" alt="Een mail van een onbekende met één gemarkeerde regel: tekst die klinkt als een opdracht. De mail gaat naar een AI-hulp, die twee dingen kan opleveren: een samenvatting voor jou, of een actie die jij niet vroeg."></picture></figure>
+<p>Je vraagt een AI-hulp om je inbox samen te vatten. Of om een webpagina te lezen. Voor jou is dat lezen. Voor het systeem is het ook invoer, en invoer kan het opvolgen.</p>
+<h2>Het probleem in één zin</h2>
+<p>Op 8 december 2025 schreef het Britse National Cyber Security Centre (NCSC), de Britse overheidsinstantie voor cyberveiligheid, er een <a href="https://www.ncsc.gov.uk/blog-post/prompt-injection-is-not-sql-injection">blog</a> over. De kern: de huidige taalmodellen trekken binnen een opdracht geen harde grens tussen instructies en gewone gegevens. Staat er in een mail of op een pagina een tekst die klinkt als een opdracht, dan kan het model daarnaar handelen. Dat heet prompt injection.</p>
+<p>SQL-injectie, een bekende aanval op databases, kun je volledig tegenhouden met geparametriseerde databasevragen. Volgens de schrijver van het blog lukt dat bij prompt injection misschien nooit. Het advies is daarom: maak de kans kleiner en beperk de schade. En kan een systeem het risico dat dan nog overblijft niet dragen? Dan is het volgens het NCSC misschien geen goede toepassing voor taalmodellen.</p>
+<p>Een kanttekening: dit is de analyse van een technisch directeur in een blog. Het is geen wet en geen norm. Maar het komt van een overheidsinstantie voor cyberveiligheid, en de lijn is duidelijk.</p>
+<h2>Wat dat betekent voor jou</h2>
+<p>Het NCSC noemt een eenvoudige ontwerpregel. Verwerkt een model gegevens van een andere partij, geef het dan niet meer rechten dan die partij zelf heeft. Dat gaat niet vanzelf. Iemand moet het zo inrichten. Laat je mails van onbekenden door een AI lezen? Zorg dan dat die AI niet bij dingen kan waar onbekenden ook niet bij mogen.</p>
+<p>Vertaald naar gewoon gebruik:</p>
+<ul><li>Hoe meer een AI kan doen, zoals versturen, betalen of verwijderen, hoe groter de schade als een tekst in een mail hem iets laat doen wat jij niet vroeg.</li><li>Geef zo'n AI dus niet meer rechten dan nodig. Laat acties door jou goedkeuren.</li><li>Beperkte rechten beperken een deel van de gevolgen, niet alle. Ook een AI die alleen leest kan privé-informatie tonen of een misleidende samenvatting geven. Lees die dus met dezelfde aandacht.</li></ul>
+<figure><picture><source media="(max-width: 560px)" srcset="/img/leest-fig2-m.png" width="900" height="1240"><img src="/img/leest-fig2.png" width="1600" height="900" loading="lazy" alt="Vijf oplopende balken voor wat een AI mag doen: lezen, samenvatten, mail versturen, betalen en verwijderen. Hoe meer rechten, hoe groter de mogelijke schade. Lezen en samenvatten zijn alleen lezen, waar ook iets mis kan gaan. Versturen, betalen en verwijderen zijn handelingen die jij eerst laat goedkeuren."></picture></figure>
+<p>Zie het als een werkregel, niet als volledige beveiliging.</p>
+<p>Fout gezien? Mail naar <a href="mailto:info@klaarwijs.nl">info@klaarwijs.nl</a>.</p></article>
+<footer class="site"><div class="w">KANZ AI LAB</div></footer></body></html>
