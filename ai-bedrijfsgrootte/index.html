@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-gebruik verschilt per bedrijfsgrootte | KANZ AI Lab</title>
+<meta name="description" content="Hoeveel Nederlandse bedrijven gebruiken AI? Het CBS telt het per bedrijfsgrootte. Met een dashboard.">
+<meta property="og:title" content="AI-gebruik verschilt per bedrijfsgrootte"><meta property="og:description" content="Hoeveel Nederlandse bedrijven gebruiken AI? Het CBS telt het per bedrijfsgrootte. Met een dashboard."><meta property="og:type" content="article"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="KANZ AI Lab"><meta property="og:url" content="https://kanz-ai-lab-nl.github.io/ai-bedrijfsgrootte/"><meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/kanz.css">
+<style>
+.kw{background:#fff;border:1px solid var(--ink);border-radius:24px;padding:1.2rem 1.2rem 1.4rem;margin:2rem 0;font-size:1rem}
+.kw h1{display:none}
+.kw p{margin:.5rem 0}
+.kw label{display:block;font-weight:700;margin:.8rem 0 .3rem}
+.kw textarea,.kw input[type=text]{width:100%;padding:.7rem .8rem;border:1px solid var(--ink);border-radius:14px;background:var(--field);font:inherit;color:var(--ink)}
+.kw textarea{min-height:9rem}
+.kw button{font:inherit;font-weight:700;border:1px solid var(--ink);background:var(--lime);color:var(--ink);padding:.7rem 1.2rem;border-radius:999px;cursor:pointer}
+.kw button.alt{background:transparent}
+.kw button[aria-pressed=true]{background:var(--lime)}
+.kw button[aria-pressed=false]{background:transparent}
+.kw .group{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0}
+.kw .card{background:var(--field);border:1px solid var(--line);border-radius:18px;padding:1rem;margin:.9rem 0}
+.kw .card .n{display:inline-block;background:var(--ink);color:var(--lime);border-radius:999px;padding:0 .6rem;font-size:.8rem;font-weight:700}
+.kw .claim{margin:.5rem 0;font-weight:700}
+.kw .row{display:flex;gap:.6rem;align-items:flex-start;margin:.4rem 0}
+.kw .row input[type=checkbox]{width:1.3rem;height:1.3rem;margin-top:.2rem;flex:none;accent-color:var(--ink)}
+.kw .row label{margin:0;font-weight:400}
+.kw .status{margin-top:.6rem;font-weight:700}
+.kw .status.ok{color:#1d5f1d}.kw .status.stop{color:#8a1c1c}.kw .status.wait{color:var(--mute)}
+.kw .sum{border:1px solid var(--ink);border-radius:16px;padding:.8rem 1rem;background:var(--lime);margin-top:1rem}
+.kw .bigbox{background:var(--field);border:1px solid var(--line);border-radius:18px;padding:1rem;margin:1rem 0}
+.kw .big{font-size:2.6rem;font-weight:800;line-height:1;font-family:var(--head)}
+.kw .bars{margin-top:1rem}
+.kw .bar{display:grid;grid-template-columns:12rem 1fr 3rem;gap:.6rem;align-items:center;margin:.7rem 0}
+.kw .track{background:var(--tile);border-radius:999px;height:1.3rem;overflow:hidden}
+.kw .fill{height:100%;background:var(--ink);border-radius:999px;transition:width .3s}
+.kw .bar.sel .fill{background:#7da92b}.kw .bar.sel{font-weight:700}
+.kw .val{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.kw .note2{font-size:.9rem;color:var(--mute)}
+@media(max-width:560px){.kw .bar{grid-template-columns:7.2rem 1fr 2.6rem;font-size:.85rem}}
+</style></head>
+<body>
+<header class="top"><div class="w"><a class="brand" href="/"><i></i>KANZ AI Lab</a><div class="menu"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Zo begin je</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div><details class="mm"><summary>Menu</summary><div class="mi"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Zo begin je</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div></details></div></header><article class="art"><p class="crumb"><a href="/">&larr; KANZ AI Lab</a></p><span class="tag">Cijfers</span>
+<h1>AI-gebruik verschilt per bedrijfsgrootte</h1><p class="small">13 oktober 2026</p>
+<figure><svg viewBox="0 0 640 260" role="img" aria-label="Vier staven die hoger worden: kleine tot grote bedrijven" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="260" rx="14" fill="#f9f8f4"/><g stroke="#16171b" stroke-width="3"><rect x="90" y="150" width="90" height="70" rx="8" fill="#e2ded3"/><rect x="215" y="120" width="90" height="100" rx="8" fill="#e2ded3"/><rect x="340" y="80" width="90" height="140" rx="8" fill="#d7f24b"/><rect x="465" y="40" width="90" height="180" rx="8" fill="#16171b"/></g><line x1="60" y1="222" x2="590" y2="222" stroke="#16171b" stroke-width="4"/><g fill="#16171b"><circle cx="135" cy="196" r="6"/><circle cx="260" cy="176" r="6"/></g></svg></figure>
+<p>Hoeveel Nederlandse bedrijven gebruiken AI? Het CBS telt het, ook voor kleine bedrijven.</p>
+<h2>Wat het CBS telde</h2>
+<p>Werkzame personen zijn ook de eigenaren zelf. Zzp'ers zonder personeel zitten niet in deze cijfers.</p>
+<p>Volgens de voorlopige cijfers over 2025 gebruikte 17% van de Nederlandse bedrijven met twee of meer werkzame personen AI.</p>
+<p>Per grootte loopt dat sterk uiteen:</p>
+<ul><li>2 tot 9 werkzame personen: 14%</li><li>10 tot 49: 27%</li><li>50 tot 249: 45%</li><li>250 of meer: 66%</li></ul>
+<p>Hoe groter het bedrijf, hoe vaker AI. In de kleinste groep is het één op de zeven.</p>
+<h2>Waarvoor?</h2>
+<p>Onder de microbedrijven die AI gebruiken (2 tot 9 werkzame personen) ging het in 2025 het vaakst om marketing en verkoop (32,7%) en om administratie of bestuurstaken (25,9%). Logistiek kwam op 2,3%.</p>
+<p>Die percentages gaan dus alleen over bedrijven die AI al gebruiken.</p>
+<h2>Wat dit niet zegt</h2>
+<p>Het CBS vraagt of een bedrijf AI-technologie gebruikt. Het zegt niets over hoe vaak, hoe goed, of met welk resultaat. Een bedrijf telt mee als het minstens één van de zeven uitgevraagde AI-technologieën gebruikt. Een hoger percentage is dus geen bewijs dat het goed gaat.</p>
+<h2>Probeer het zelf</h2>
+<p>Het dashboard hieronder laat het aandeel per bedrijfsgrootte zien. Kies een grootteklasse. Alles draait in je browser. Er wordt niets verstuurd of bewaard.</p><div class="kw">
+<h1>AI-gebruik per bedrijfsgrootte</h1>
+<p>Aandeel bedrijven in Nederland dat AI gebruikt. Kies een grootteklasse (werkzame personen, inclusief eigenaren). Voorlopige cijfers over 2025.</p>
+<div class="group" id="sizes" role="group" aria-label="Bedrijfsgrootte"></div>
+<div class="bigbox"><div id="big" class="big" aria-live="polite"></div><p id="txt"></p></div>
+<div class="bars" id="bars"></div>
+<p class="note2">Cijfers: CBS, ICT-gebruik bij bedrijven. Cijfers over 2025 zijn voorlopig. Het CBS telt een bedrijf mee zodra het minstens één van de zeven uitgevraagde AI-technologieën gebruikt; het zegt niets over hoe intensief of hoe goed. Werkzame personen zijn inclusief eigenaren; zzp'ers zonder personeel zitten niet in deze cijfers.</p>
+<p class="note2">Alles blijft in deze pagina. Er wordt niets verstuurd, opgeslagen of gevolgd.</p>
+<script>
+(function(){
+var D=[
+{k:'2 tot 9 werkzame personen',v:{2025:14}},
+{k:'10 tot 49 werkzame personen',v:{2025:27}},
+{k:'50 tot 249 werkzame personen',v:{2025:45}},
+{k:'250 of meer werkzame personen',v:{2025:66}}];
+var si=0,yr=2025;
+var sizes=document.getElementById('sizes'),bars=document.getElementById('bars'),big=document.getElementById('big'),txt=document.getElementById('txt');
+function mk(box,label,on,fn){var b=document.createElement('button');b.type='button';b.textContent=label;b.setAttribute('aria-pressed',on);b.addEventListener('click',fn);box.appendChild(b);return b}
+function render(){
+ sizes.innerHTML='';
+ D.forEach(function(d,i){mk(sizes,d.k,i===si,function(){si=i;render()})});
+ var d=D[si],v=d.v[yr];
+ big.textContent=v+'%';
+ txt.textContent='van de bedrijven met '+d.k+' gebruikte in 2025 AI (voorlopig).';
+ bars.innerHTML='';
+ D.forEach(function(x,i){
+  var r=document.createElement('div');r.className='bar'+(i===si?' sel':'');
+  r.innerHTML='<span></span><div class="track"><div class="fill" style="width:'+x.v[yr]+'%"></div></div><span class="val">'+x.v[yr]+'%</span>';
+  r.firstChild.textContent=x.k;bars.appendChild(r);
+ });
+}
+render();
+})();
+</script></div>
+
+<p>Fout gezien? Mail naar <a href="mailto:info@klaarwijs.nl">info@klaarwijs.nl</a>.</p></article>
+<footer class="site"><div class="w">KANZ AI LAB</div></footer></body></html>
