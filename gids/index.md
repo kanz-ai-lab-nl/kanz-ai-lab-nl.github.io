@@ -3,9 +3,9 @@
 **Een praktische gids van KANZ AI Lab**  
 Versie 1.1 - 9 oktober 2026
 
-AI kan je sneller van een leeg vel naar een bruikbaar concept brengen. Het is minder geschikt als eindverantwoordelijke. Zie AI daarom als een snelle junior assistent: goed in ideeën, structuur en varianten, maar zonder vanzelfsprekend begrip van jouw klant, vakregels of de feiten.
+AI brengt je sneller van een leeg vel naar een bruikbaar concept. Eindverantwoordelijke is het niet. Zie het als een snelle junior assistent. Goed in ideeën, structuur en varianten, maar zonder vanzelfsprekend begrip van jouw klant, je vakregels of de feiten.
 
-Deze gids helpt je klein en veilig te beginnen. Het is algemene informatie, geen juridisch, medisch of financieel advies. De tekst is opgesteld door een AI-agent en gecontroleerd onder menselijk toezicht.
+Met deze gids begin je klein en veilig. Het is algemene informatie, geen juridisch, medisch of financieel advies. Een AI-agent heeft de tekst opgesteld, onder menselijk toezicht gecontroleerd.
 
 ## Alle onderdelen
 
@@ -26,7 +26,9 @@ Deze gids helpt je klein en veilig te beginnen. Het is algemene informatie, geen
 
 ## 1. Kies eerst de juiste taak
 
-De beste eerste AI-taak is klein, controleerbaar en makkelijk terug te draaien. Gebruik deze stoplichttest.
+De beste eerste AI-taak is klein, controleerbaar en makkelijk terug te draaien. Gebruik daarvoor deze stoplichttest.
+
+<figure><picture><source media="(max-width: 560px)" srcset="/img/gids-fig1-m.png" width="900" height="1420"><img src="/img/gids-fig1.png" width="1600" height="900" loading="lazy" alt="Drie kaarten volgens de stoplichttest. Groen, geschikt om mee te starten: ideeën ordenen, eigen tekst inkorten, checklist maken. Oranje, alleen met extra controle: offerte of klantmail, lange tekst samenvatten, berekening voorstellen. Rood, niet in een algemene chatbot: medische gegevens, wachtwoorden en codes, besluiten over mensen."></picture></figure>
 
 ### Groen: geschikt om mee te starten
 
@@ -47,7 +49,7 @@ De beste eerste AI-taak is klein, controleerbaar en makkelijk terug te draaien. 
 - markt- of concurrentieanalyse;
 - code, formules of berekeningen laten voorstellen.
 
-Hier kunnen fouten reputatie, geld of klantvertrouwen kosten. Gebruik geen vertrouwelijke broninformatie, controleer elke belangrijke claim en laat bij specialistische onderwerpen zo nodig een deskundige meekijken.
+Hier kan een fout je reputatie, geld of het vertrouwen van een klant kosten. Gebruik dus geen vertrouwelijke broninformatie en controleer elke belangrijke claim. Gaat het om een specialistisch onderwerp? Laat dan zo nodig een deskundige meekijken.
 
 ### Rood: niet in een algemene AI-chatbot stoppen
 
@@ -73,7 +75,7 @@ Voorbeeld:
 
 ## 2. Bescherm privacy en vertrouwelijke informatie
 
-Wat je invoert, gaat naar de aanbieder van de AI-dienst. Hoe die aanbieder gegevens opslaat, gebruikt of verwijdert, verschilt per tool en accounttype. Ga daarom niet uit van vertrouwelijkheid zonder dit te controleren.
+Wat je invoert, gaat naar de aanbieder van de AI-dienst. Hoe die gegevens opslaat, gebruikt of verwijdert, verschilt per tool en per soort account. Ga dus niet zomaar uit van vertrouwelijkheid. Controleer het eerst.
 
 ### Pas dataminimalisatie toe
 
@@ -83,7 +85,7 @@ Geef alleen informatie die nodig is voor de taak. Vervang details bijvoorbeeld z
 - `omzetdaling van €18.430 in april` wordt, als het exacte bedrag niet nodig is, `een omzetdaling van ongeveer 15%`;
 - een volledig klantgesprek wordt een eigen opsomming zonder namen, contactgegevens of unieke kenmerken.
 
-Alleen een naam verwijderen is niet altijd genoeg. Een combinatie van functie, woonplaats, leeftijd en project kan iemand nog steeds herkenbaar maken. Dat is pseudonimiseren, niet per se anonimiseren.
+Alleen een naam weghalen is niet altijd genoeg. Functie, woonplaats, leeftijd en project samen kunnen iemand nog steeds herkenbaar maken. Dan heb je gepseudonimiseerd, en niet per se geanonimiseerd.
 
 ### Controleer een tool vóór zakelijk gebruik
 
@@ -104,30 +106,32 @@ Kun je dit niet duidelijk vaststellen? Voer dan geen persoonsgegevens of vertrou
 2. **Alleen na schoonmaken:** klantcontext die je volledig anonimiseert en verkort.
 3. **Niet toegestaan:** gevoelige persoonsgegevens, geheimen, toegangsgegevens en volledige klantbestanden.
 
-Werk je met medewerkers of onderaannemers, leg dan ook vast welke AI-tools wel en niet zijn toegestaan. De Europese AI-verordening (AI Act) bevat een bepaling over AI-geletterdheid (artikel 4): organisaties die AI aanbieden of gebruiken, moeten maatregelen nemen om de AI-geletterdheid te bevorderen van hun personeel en van anderen die namens hen met AI werken, passend bij hun kennis, ervaring en de manier waarop ze AI gebruiken. Welke verplichtingen precies gelden, hangt af van jouw rol en toepassing.
+Werk je met medewerkers of onderaannemers? Leg dan ook vast welke AI-tools wel en niet mogen. De Europese AI-verordening (AI Act) heeft een bepaling over AI-geletterdheid ([artikel 4](https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers)). Organisaties die AI aanbieden of gebruiken, moeten maatregelen nemen om de AI-geletterdheid te bevorderen van hun personeel en van anderen die namens hen met AI werken. Dat moet passen bij hun kennis, hun ervaring en de manier waarop ze AI gebruiken. Welke verplichtingen precies voor jou gelden, hangt af van je rol en je toepassing.
 
 ---
 
 ## 3. Controleer feiten voordat je iets gebruikt
 
-Een overtuigende formulering is geen bewijs. Een taalmodel voorspelt passende tekst en kan bronnen, cijfers, citaten of gebeurtenissen verzinnen.
+Iets wat overtuigend klinkt, is daarmee nog niet waar. Een taalmodel voorspelt tekst die past, en kan daarbij bronnen, cijfers, citaten of gebeurtenissen verzinnen.
 
 ### De vijfstappencheck
+
+<figure><picture><source media="(max-width: 560px)" srcset="/img/gids-fig2-m.png" width="900" height="1300"><img src="/img/gids-fig2.png" width="1600" height="900" loading="lazy" alt="Vijf stappen op een rij: markeer controleerbare claims, zoek de primaire bron, check met een tweede bron, kijk naar datum en context, bewaar een controlespoor."></picture></figure>
 
 **1. Markeer controleerbare claims**  
 Onderstreep namen, data, bedragen, percentages, wetsregels, productspecificaties, citaten en stellige oorzaak-gevolgclaims.
 
 **2. Zoek de primaire bron**  
-Gebruik bijvoorbeeld de officiële wet- of overheidspagina, de oorspronkelijke onderzoekspublicatie, de productdocumentatie of je eigen administratie. Vraag de AI gerust welke claim controle nodig heeft, maar laat de AI niet zijn eigen bewijs zijn.
+Denk aan de officiële wet- of overheidspagina, de oorspronkelijke onderzoekspublicatie, de productdocumentatie of je eigen administratie. Je kunt de AI gerust vragen welke claims controle nodig hebben. Maar laat de AI niet zijn eigen bewijs zijn.
 
 **3. Controleer impactvolle claims met een tweede bron**  
-Gaat de informatie naar een klant of kan een fout geld, gezondheid, rechten of reputatie raken? Zoek dan een onafhankelijke tweede bron of raadpleeg een deskundige.
+Gaat de informatie naar een klant, of kan een fout geld, gezondheid, rechten of reputatie raken? Zoek dan een onafhankelijke tweede bron of vraag een deskundige.
 
 **4. Controleer datum en context**  
-Een correcte bron kan verouderd zijn. Kijk naar publicatie- en wijzigingsdatum, land, doelgroep, uitzonderingen en definities.
+Ook een goede bron kan verouderd zijn. Kijk naar de publicatie- en wijzigingsdatum, het land, de doelgroep, uitzonderingen en definities.
 
 **5. Bewaar een klein controlespoor**  
-Noteer per belangrijke claim de bronlink, controledatum en eventuele onzekerheid. Zo kun je later uitleggen waarop je werk is gebaseerd.
+Noteer per belangrijke claim de bronlink, de datum van je controle en wat nog onzeker is. Dan kun je later uitleggen waarop je werk rust.
 
 ### Praktisch controleformat
 
@@ -137,13 +141,13 @@ Noteer per belangrijke claim de bronlink, controledatum en eventuele onzekerheid
 | "Product A heeft functie B" | Documentatie leverancier | Soms | Bevestigd / onzeker |
 | "Klant wil levering vrijdag" | Eigen e-mail of opdracht | Nee, wel bron teruglezen | Bevestigd / onzeker |
 
-Laat onzekerheid staan als je een claim niet kunt bevestigen. Schrijf bijvoorbeeld: `Ik heb hiervoor geen actuele primaire bron gevonden` in plaats van een gok glad te formuleren.
+Kun je een claim niet bevestigen? Laat de onzekerheid dan gewoon staan. Schrijf bijvoorbeeld `Ik heb hiervoor geen actuele primaire bron gevonden`, in plaats van een gok glad te formuleren.
 
 ---
 
 ## 4. Vijf herbruikbare prompts
 
-Vervang de tekst tussen blokhaken. Deel geen persoonsgegevens of vertrouwelijke gegevens.
+Vervang de tekst tussen blokhaken. Deel geen persoonsgegevens en geen vertrouwelijke gegevens.
 
 ### Prompt 1 - Kies een veilige eerste AI-taak
 
@@ -176,7 +180,7 @@ Maak nog geen inhoudelijk resultaat en herhaal gevoelige gegevens niet onnodig.
 Informatie: [plak alleen informatie die je al veilig acht]
 ```
 
-**Let op:** deze prompt maakt het niet veilig om gevoelige gegevens eerst tóch in te voeren. Doe de eerste schoonmaak zelf, vóór je de tekst in een tool plakt.
+**Let op:** door deze prompt wordt het niet ineens veilig om gevoelige gegevens toch in te voeren. Doe de eerste schoonmaak zelf, voordat je de tekst in een tool plakt.
 
 ### Prompt 3 - Maak een concept met duidelijke grenzen
 
@@ -239,7 +243,7 @@ Tekst: [concepttekst]
 
 ## 5. Een eerste oefening van 20 minuten
 
-Kies één groene taak die je deze week toch al moest doen, bijvoorbeeld een agenda of structuur voor een blog.
+Kies één groene taak die je deze week toch al moest doen. Een agenda bijvoorbeeld, of de opbouw van een blog.
 
 1. Schrijf de taakzin.
 2. Verwijder alle niet-noodzakelijke klantdetails.
@@ -248,7 +252,7 @@ Kies één groene taak die je deze week toch al moest doen, bijvoorbeeld een age
 5. Controleer de claims in je eigen bronmateriaal.
 6. Verbeter de tekst zelf en noteer hoeveel tijd het werkelijk scheelde.
 
-Was de controle bijna net zoveel werk als zelf maken? Kies de volgende keer een eenvoudiger taak. Tijdwinst telt pas als het resultaat ook betrouwbaar en veilig is.
+Was het controleren bijna net zoveel werk als het zelf maken? Kies de volgende keer een eenvoudiger taak. Tijdwinst telt pas als het resultaat ook betrouwbaar en veilig is.
 
 ---
 
@@ -277,7 +281,7 @@ Geraadpleegd op 9 oktober 2026:
 - KVK, [Zo maak je een duidelijk AI-beleid voor je bedrijf](https://www.kvk.nl/runnen-en-groeien/zo-maak-je-een-duidelijk-ai-beleid-voor-je-bedrijf/)
 - KVK, [Privacywet AVG voor beginners](https://www.kvk.nl/wetten-en-regels/privacywet-avg-voor-beginners/)
 
-Regels en diensten veranderen. Controleer actuele officiële bronnen voordat je deze gids gebruikt voor advies aan klanten.
+Regels en diensten veranderen. Gebruik je deze gids voor advies aan klanten? Controleer dan eerst de actuele officiële bronnen.
 
 ---
 
