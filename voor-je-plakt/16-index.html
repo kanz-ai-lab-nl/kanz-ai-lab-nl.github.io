@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voor je plakt: kan dit ook zonder persoonsgegevens? | KANZ AI Lab</title>
+<meta name="description" content="Voor je gegevens in een AI-chat plakt: kan het ook zonder persoonsgegevens? Wat de AP zegt en een werkregel.">
+<meta property="og:title" content="Voor je plakt: kan dit ook zonder persoonsgegevens?"><meta property="og:description" content="Voor je gegevens in een AI-chat plakt: kan het ook zonder persoonsgegevens? Wat de AP zegt en een werkregel."><meta property="og:type" content="article"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="KANZ AI Lab"><meta property="og:url" content="https://kanz-ai-lab-nl.github.io/voor-je-plakt/"><meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/kanz.css">
+<style>
+.kw{background:#fff;border:1px solid var(--ink);border-radius:24px;padding:1.2rem 1.2rem 1.4rem;margin:2rem 0;font-size:1rem}
+.kw h1{display:none}
+.kw p{margin:.5rem 0}
+.kw label{display:block;font-weight:700;margin:.8rem 0 .3rem}
+.kw textarea,.kw input[type=text]{width:100%;padding:.7rem .8rem;border:1px solid var(--ink);border-radius:14px;background:var(--field);font:inherit;color:var(--ink)}
+.kw textarea{min-height:9rem}
+.kw button{font:inherit;font-weight:700;border:1px solid var(--ink);background:var(--lime);color:var(--ink);padding:.7rem 1.2rem;border-radius:999px;cursor:pointer}
+.kw button.alt{background:transparent}
+.kw button[aria-pressed=true]{background:var(--lime)}
+.kw button[aria-pressed=false]{background:transparent}
+.kw .group{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0}
+.kw .card{background:var(--field);border:1px solid var(--line);border-radius:18px;padding:1rem;margin:.9rem 0}
+.kw .card .n{display:inline-block;background:var(--ink);color:var(--lime);border-radius:999px;padding:0 .6rem;font-size:.8rem;font-weight:700}
+.kw .claim{margin:.5rem 0;font-weight:700}
+.kw .row{display:flex;gap:.6rem;align-items:flex-start;margin:.4rem 0}
+.kw .row input[type=checkbox]{width:1.3rem;height:1.3rem;margin-top:.2rem;flex:none;accent-color:var(--ink)}
+.kw .row label{margin:0;font-weight:400}
+.kw .status{margin-top:.6rem;font-weight:700}
+.kw .status.ok{color:#1d5f1d}.kw .status.stop{color:#8a1c1c}.kw .status.wait{color:var(--mute)}
+.kw .sum{border:1px solid var(--ink);border-radius:16px;padding:.8rem 1rem;background:var(--lime);margin-top:1rem}
+.kw .bigbox{background:var(--field);border:1px solid var(--line);border-radius:18px;padding:1rem;margin:1rem 0}
+.kw .big{font-size:2.6rem;font-weight:800;line-height:1;font-family:var(--head)}
+.kw .bars{margin-top:1rem}
+.kw .bar{display:grid;grid-template-columns:12rem 1fr 3rem;gap:.6rem;align-items:center;margin:.7rem 0}
+.kw .track{background:var(--tile);border-radius:999px;height:1.3rem;overflow:hidden}
+.kw .fill{height:100%;background:var(--ink);border-radius:999px;transition:width .3s}
+.kw .bar.sel .fill{background:#7da92b}.kw .bar.sel{font-weight:700}
+.kw .val{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.kw .note2{font-size:.9rem;color:var(--mute)}
+@media(max-width:560px){.kw .bar{grid-template-columns:7.2rem 1fr 2.6rem;font-size:.85rem}}
+</style></head>
+<body>
+<header class="top"><div class="w"><a class="brand" href="/"><i></i>KANZ AI Lab</a><div class="menu"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Zo begin je</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div><details class="mm"><summary>Menu</summary><div class="mi"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Zo begin je</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div></details></div></header><article class="art"><p class="crumb"><a href="/">&larr; KANZ AI Lab</a></p><span class="tag">Praktische gids</span>
+<h1>Voor je plakt: kan dit ook zonder persoonsgegevens?</h1><p class="small">13 oktober 2026</p>
+<figure><picture><source media="(max-width: 560px)" srcset="/img/plakken-fig1-m.png" width="900" height="1350"><img src="/img/plakken-fig1.png" width="1600" height="900" alt="Links een document met enkele gemarkeerde stukken persoonsgegevens, rechts een chatvenster waarin die stukken zijn vervangen door de aanduidingen klant A tot en met klant D."></picture></figure>
+<p>Ctrl+V, enter. Een klantmail, een offerte of een lijst met namen staat in twee seconden in een AI-chat. Daarmee staan die gegevens ook in een ander systeem. Wat er daar mee gebeurt? Dat hangt af van het gereedschap dat je gebruikt en hoe je het hebt ingesteld.</p>
+<h2>Wat de toezichthouder zegt</h2>
+<p>Op 13 juli 2026 bracht de Autoriteit Persoonsgegevens (AP) een <a href="https://autoriteitpersoonsgegevens.nl/documenten/hulpmiddel-generatieve-ai-en-de-avg">praktisch hulpmiddel</a> uit voor organisaties die generatieve AI willen aanschaffen, invoeren en gebruiken. Het is een checklist. Stap voor stap ga je na of je organisatie generatieve AI wil, kan en mag gebruiken, en welke AVG-verplichtingen en maatregelen daarbij horen.</p>
+<p>Eén advies van de AP is heel simpel. Zoek eerst uit of je generatieve AI kunt gebruiken zonder persoonsgegevens te verwerken. Kun je niet zonder? Neem privacy dan vanaf het begin mee.</p>
+<p>Een kanttekening: de checklist is gemaakt voor privacyprofessionals, projectleiders en andere verantwoordelijken in organisaties die AI invoeren. Niet voor die ene keer kopiëren en plakken. Wat je wel of niet in een chatvenster zet, staat er dus niet in. Een richting geeft het je wel.</p>
+<h2>Zo kijkt de AP in de praktijk</h2>
+<p>Een voorbeeld. De gemeente Haarlemmermeer wilde Microsoft 365 Copilot gaan gebruiken, een AI-assistent die direct gekoppeld is aan de documenten en communicatie van medewerkers. Ze vroeg de AP vooraf om advies. Dat heet een voorafgaande raadpleging.</p>
+<p>Het antwoord was duidelijk. Zoals de gemeente het van plan was, zou de verwerking van persoonsgegevens via Copilot in strijd zijn met de AVG. Een verbod is het niet: met de juiste maatregelen mag Haarlemmermeer Copilot wel gebruiken, <a href="https://www.dutchitchannel.nl/news/756136/ap-biedt-hulpmiddel-rond-privacywetgeving-avg">meldde Dutch IT Channel</a>.</p>
+<p>Jij bent geen gemeente. Toch geldt dezelfde les in het klein. Hoe meer een AI-tool kan inzien, hoe belangrijker het is wat je erin stopt.</p>
+<figure><picture><source media="(max-width: 560px)" srcset="/img/plakken-fig2-m.png" width="900" height="1350"><img src="/img/plakken-fig2.png" width="1600" height="900" loading="lazy" alt="Een raster van documenten rond een AI-tool. Drie ringen tonen het bereik: wat je zelf plakt, een gekoppelde map en alle documenten en mail. Hoe groter de ring, hoe meer documenten de tool kan inzien."></picture></figure>
+<h2>Een praktische vraag vooraf</h2>
+<p>De vragen hieronder zijn een eigen werkregel van het lab. Ze komen niet uit de AP-checklist en het is geen advies van de AP. Loop ze langs voordat je iets plakt:</p>
+<ol><li>Heeft de AI de namen, adressen of andere gegevens van personen echt nodig om te helpen?</li><li>Zo nee: haal ze eruit of vervang ze door een aanduiding, bijvoorbeeld "klant A". Let op: ook andere details, zoals een functie, een plaats of een gebeurtenis, kunnen iemand nog herkenbaar maken.</li><li>Zo ja: kijk wat er in je werk is afgesproken over dit gereedschap. Twijfel je, vraag het dan eerst aan iemand met verstand van privacy.</li></ol>
+<figure><picture><source media="(max-width: 560px)" srcset="/img/plakken-fig3-m.png" width="900" height="1230"><img src="/img/plakken-fig3.png" width="1600" height="900" loading="lazy" alt="Stroomschema van de drie vragen. Bij vraag 1 worden persoonsgegevens gemarkeerd. Bij nee worden ze bij vraag 2 vervangen door klant A tot en met klant D. Bij ja leidt een pijl naar vraag 3: check de afspraken, en vraag het na bij twijfel."></picture></figure>
+<p>Wat in jouw situatie mag, kan dit lijstje niet voor je bepalen. Het is geen juridisch oordeel.</p>
+<p>Wil je verder? In de <a href="/gids/">gids Veilig starten met AI</a> lees je welke taken geschikt zijn, wat je beter niet invoert en hoe je de uitkomst controleert.</p>
+<p>Fout gezien? Mail naar <a href="mailto:info@klaarwijs.nl">info@klaarwijs.nl</a>.</p></article>
+<footer class="site"><div class="w">KANZ AI LAB</div></footer></body></html>
