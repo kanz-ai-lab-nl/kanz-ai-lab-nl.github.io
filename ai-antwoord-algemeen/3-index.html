@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waarom een AI-antwoord zo algemeen blijft | KANZ AI Lab</title>
+<meta name="description" content="Dezelfde vraag aan een AI, zonder en met context naast elkaar, wat dat wel en niet bewijst, en een invulhulp voor je volgende vraag.">
+<meta property="og:title" content="Waarom een AI-antwoord zo algemeen blijft"><meta property="og:description" content="Een kale vraag en een vraag met context naast elkaar, en een invulhulp."><meta property="og:type" content="article"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="KANZ AI Lab"><meta property="og:url" content="https://kanz-ai-lab-nl.github.io/ai-antwoord-algemeen/"><meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/kanz.css">
+<style>
+.kw{background:#fff;border:1px solid var(--ink);border-radius:24px;padding:1.2rem 1.2rem 1.4rem;margin:2rem 0;font-size:1rem}
+.kw h2{margin-top:0}
+.kw p{margin:.5rem 0}
+.kw .q{background:var(--field);border:1px solid var(--line);border-radius:18px;padding:1rem;margin:.9rem 0}
+.kw .q .n{display:inline-block;background:var(--ink);color:var(--lime);border-radius:999px;padding:0 .6rem;font-size:.8rem;font-weight:700}
+.kw .q p{font-weight:700}
+.kw .group{display:flex;gap:.5rem;margin:.6rem 0 0}
+.kw button{font:inherit;font-weight:700;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:.6rem 1.2rem;border-radius:999px;cursor:pointer}
+.kw button[aria-pressed=true]{background:var(--lime)}
+.kw button.go{background:var(--lime)}
+.kw .res{border:1px solid var(--ink);border-radius:16px;padding:1rem;background:var(--lime);margin-top:1rem}
+.kw .res h3{margin:.1rem 0 .4rem}
+.kw .res ul{margin:.4rem 0 .4rem 1.2rem;padding:0}
+.kw .note2{font-size:.9rem;color:var(--mute)}
+.kw label{display:block;font-weight:700;margin:.8rem 0 .2rem}.kw textarea{width:100%;font:inherit;border:1px solid var(--ink);border-radius:12px;padding:.6rem;background:#fff;color:var(--ink);box-sizing:border-box}.kw .out{white-space:pre-wrap}.kw .warn{margin-top:.7rem;font-weight:700}
+.kw .f{margin:.9rem 0}.kw .f label{display:block;font-weight:700;margin:0 0 .3rem}.kw .f .h{font-size:.9rem;color:var(--mute);margin:0 0 .3rem}.kw .f textarea{min-height:5rem}</style></head>
+<body>
+<header class="top"><div class="w"><a class="brand" href="/"><i></i>KANZ AI Lab</a><div class="menu"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Zo begin je</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div><details class="mm"><summary>Menu</summary><div class="mi"><nav aria-label="Menu"><a href="/#posts">Posts</a><a href="/#aanbod">Zo begin je</a><a href="/#over">Over</a></nav><a class="cta" href="/gids/">Gids: veilig starten met AI</a></div></details></div></header><article class="art"><p class="crumb"><a href="/">&larr; KANZ AI Lab</a></p><span class="tag">Praktische gids</span>
+<h1>Waarom een AI-antwoord zo algemeen blijft</h1><p class="small">16 oktober 2026</p>
+<p>Schrijf bij je volgende vraag aan een AI eerst twee dingen op: wie het antwoord leest en wat het moet bereiken. Zet ze boven je vraag.</p>
+<figure><picture><source media="(max-width: 560px)" srcset="/img/ai-antwoord-algemeen-fig1-m.png" width="900" height="1240"><img src="/img/ai-antwoord-algemeen-fig1.png" width="1600" height="900" alt="Links drie invulvelden (voor wie, wat moet het bereiken, wat weet de AI niet), rechts de vraag die daaruit komt, met de zin dat de AI eerst moet vragen of zijn aanname moet noemen."></picture></figure>
+<p>Op Reddit beschreef iemand in mei 2026 een zwakke vraag als een korte opdracht zonder lezer, doel of voorgeschiedenis. Het antwoord is dan een voorzichtige gok, omdat de AI niet weet voor wie het is, welke toon past en wat je al probeerde. Wij zijn het daar deels mee eens. Daarom schreven wij een vergelijking uit.</p>
+<h2>Drie vragen, dezelfde situatie</h2>
+<p>Het voorbeeld is fictief: een klant die een factuur van 1.200 euro negen dagen over de termijn nog niet betaalde. Wij vergelijken drie manieren om dezelfde vraag te stellen. De eerste is kaal: "Mijn klant betaalt zijn factuur te laat. Wat moet ik doen?" De tweede zet erbij voor wie het antwoord is, wat het moet bereiken en wat de AI anders moet raden, met het verzoek om een mail. De derde is de kale vraag, met de opdracht om eerst vragen te stellen.</p>
+<p>Elke variant gaat drie keer door een AI, steeds in een nieuwe sessie. De letterlijke prompts, de zeven ja/nee-vragen en de regels staan vooraf vast. Wie de runs uitvoert, schrijft de uitvoer en de scores zoals ze zijn op, ook als ze tegenvallen. Wij schreven geen antwoorden zelf.</p>
+<p>Wij voerden de proef uit op 16 oktober 2026 met Claude Opus 5.5: elke vraag drie keer, elke keer in een nieuwe sessie. Een aparte sessie beoordeelde de negen eindantwoorden zonder te weten welke vraag erbij hoorde. Per antwoord telden wij hoeveel van de zeven controles goed uitvielen.</p>
+<ul>
+<li>Kale vraag: 3, 3 en 3 van de 7. Rond 400 woorden per antwoord.</li>
+<li>Vraag met context: 7, 6 en 6 van de 7. Rond 200 woorden.</li>
+<li>Eerst vragen laten stellen: 5, 5 en 4 van de 7. Rond 330 woorden, plus een extra ronde.</li>
+</ul>
+<p>De kale vraag gaf drie keer hetzelfde soort antwoord: een stappenplan van herinnering tot kantonrechter, met de regels voor bedrijven en particulieren naast elkaar. Er zat geen mail bij. Alle drie eindigden met de vraag of de klant een bedrijf of een particulier is en hoe lang de factuur openstaat.</p>
+<p>Met context kwam er drie keer een mail met het bedrag, het factuurnummer en een plek voor de uiterste betaaldatum, klaar om in te vullen en te versturen. Twee van de drie stelden zelf een volgende stap voor: eerst bellen als er na die datum niets binnen is.</p>
+<p>De vraag-eerst-variant stelde drie of vier vragen terug. Alle drie wilden weten of de klant een bedrijf of een particulier is, en dat hadden wij niet opgegeven. Na onze antwoorden volgde een mail die sterk leek op die van de tweede vraag, met uitleg over rente en incassokosten eromheen.</p>
+<p><b>In deze proef gaf context vooraf het bruikbaarste antwoord in de minste tekst.</b> Eerst vragen laten stellen kwam in de buurt, maar kostte een extra ronde en meer leeswerk.</p>
+<p>Twee kanttekeningen. Bedrag en termijn stonden bij de tweede vraag al in de prompt, dus die controles waren daar makkelijk. En de sessies draaiden in een account waarin de AI al iets over de gebruiker wist; in één run vroeg hij daardoor naar diens eigen bedrijf. Wat de antwoorden over rente en incassokosten zeiden, hebben wij niet gecontroleerd. Dat hoort niet bij deze proef.</p>
+<p>De derde variant vraagt de AI om eerst vragen te stellen en pas daarna te antwoorden. De standaardzin voor deze aanpak komt van een Reddit-gebruiker: "Before answering, ask me the minimum number of questions needed to avoid a generic response."</p>
+<p>Een kleine kanttekening bij de derde variant. Een AI die eerst vragen stelt, kost je een extra ronde. Voor een korte mail aan een goede klant is dat meer moeite dan de vraag met context vooraf. Voor een taak waarbij je zelf niet goed weet wat telt, kan het de snellere weg zijn. Welke van de twee voor jou werkt, hangt van de taak af en van hoeveel je al weet.</p>
+<h2>Het sterkste bezwaar</h2>
+<p>Meer context werkt niet altijd. In februari 2026 vroeg iemand op Reddit waarom iedereen denkt dat meer context in een prompt beter is, en kreeg 34 reacties. Een reageerder schreef: "More is not automatically better." Anderen vinden dat vooral gestructureerde, relevante informatie ertoe doet. Dat bezwaar nemen wij serieus. Daarom stelt de invulhulp maar drie vragen en vraagt hij niet om alles wat je weet. Of drie vragen de goede zijn voor jouw taak, weten wij niet.</p>
+<h2>Waar de proef ophoudt</h2>
+<p>De proef blijft klein: drie runs per variant, één taak, één AI-tool en een beoordeling door één lezer. Eén vraag meet iets wat in geen enkele prompt staat, namelijk of het antwoord een vervolgstap noemt als de mail niet helpt. Ze zegt niets over andere taken, andere tools of over een mail die bij een echte klant werkt.</p>
+<p>Een verwante meting komt van Anthropic. In zijn <a href="https://www.anthropic.com/research/anthropic-economic-index-january-2026-report">Economic Index van januari 2026</a> lopen het opleidingsniveau van de vragen en dat van de antwoorden bijna gelijk op (r groter dan 0,92, op het niveau van landen en van Amerikaanse staten). Dat zijn gemiddelden. Over de kwaliteit van één antwoord zegt het niets.</p>
+<h2>Bronnen</h2>
+<p>De twee discussies: <a href="https://www.reddit.com/r/AI_Agents/comments/1rcj94t/why_does_everyone_think_more_context_in_prompts/">r/AI_Agents, 23 februari 2026</a> en <a href="https://www.reddit.com/r/ChatGPT/comments/1tb2io3/most_people_dont_have_a_chatgpt_problem_they_have/">r/ChatGPT, 12 mei 2026</a>. Het onderzoek: <a href="https://www.anthropic.com/research/anthropic-economic-index-january-2026-report">Anthropic Economic Index, januari 2026</a>.</p>
+<h2>Bouw je eigen vraag</h2>
+<p>Vul drie velden in en je krijgt een vraag om te gebruiken. Alles blijft in je browser en er wordt niets verstuurd of bewaard. Vul geen namen of gegevens van klanten in.</p>
+<div class="kw" id="kw">
+<h2>Jouw vraag</h2>
+<div class="f"><label for="w">Voor wie is het antwoord?</label><p class="h">Bijvoorbeeld: een klant die graag snel antwoord wil.</p><textarea id="w"></textarea></div>
+<div class="f"><label for="d">Wat moet het bereiken?</label><p class="h">Bijvoorbeeld: dat de factuur deze week betaald wordt.</p><textarea id="d"></textarea></div>
+<div class="f"><label for="b">Wat weet de AI anders niet?</label><p class="h">Bijvoorbeeld: bedrag, termijn, wat je al probeerde. Alleen wat telt.</p><textarea id="b"></textarea></div>
+<p><button class="go" id="go" type="button">Maak mijn vraag</button> <button id="rs" type="button">Opnieuw</button></p>
+<p class="status note2" id="msg" role="status"></p>
+<div class="res" id="res" hidden><h3>Jouw vraag</h3><p class="out" id="out"></p></div>
+</div>
+<script>
+(function(){
+var w=document.getElementById('w'),d=document.getElementById('d'),b=document.getElementById('b');
+var go=document.getElementById('go'),rs=document.getElementById('rs'),res=document.getElementById('res'),out=document.getElementById('out'),msg=document.getElementById('msg');
+go.addEventListener('click',function(){
+ var a=w.value.trim(),c=d.value.trim(),e=b.value.trim();
+ if(!a||!c){msg.textContent='Vul minstens in voor wie het is en wat het moet bereiken.';res.hidden=true;return}
+ var t='Het antwoord is voor: '+a+'\nHet moet bereiken: '+c+'\n';
+ if(e){t+='Dit moet je weten: '+e+'\n';}
+ t+='Als je iets moet raden, vraag het me eerst, of zeg welke aanname je maakt en ga door.\n\nMijn vraag: [typ hier je vraag]';
+ out.textContent=t;res.hidden=false;msg.textContent='';
+});
+rs.addEventListener('click',function(){w.value='';d.value='';b.value='';res.hidden=true;out.textContent='';msg.textContent='';});
+})();
+</script>
+<p>Schrijf bij je volgende vraag eerst op voor wie het antwoord is en wat het moet bereiken.</p>
+<p>Fout gezien? Mail naar <a href="mailto:info@klaarwijs.nl">info@klaarwijs.nl</a>.</p></article>
+<footer class="site"><div class="w">© Klaarwijs</div></footer></body></html>
+
