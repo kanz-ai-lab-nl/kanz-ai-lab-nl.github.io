@@ -285,7 +285,7 @@ Regels en diensten veranderen. Gebruik je deze gids voor advies aan klanten? Con
 
 ---
 
-Fout gevonden of een suggestie? Mail naar [info@klaarwijs.nl](mailto:info@klaarwijs.nl). Deze gids is algemene informatie en geen vervanging voor professioneel advies.
+Deze gids is algemene informatie en geen vervanging voor professioneel advies.
 
 
 ---
